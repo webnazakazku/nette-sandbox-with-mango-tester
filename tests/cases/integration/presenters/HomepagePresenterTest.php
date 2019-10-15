@@ -1,4 +1,5 @@
-<?php declare(strict_types = 1);
+<?php
+declare(strict_types=1);
 
 namespace AppTests\Presenters;
 
@@ -7,21 +8,19 @@ use Mangoweb\Tester\PresenterTester\PresenterTester;
 
 $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
 
-
 /**
  * @testCase
  */
 class HomepagePresenterTest extends TestCase
 {
+
 	/** @var PresenterTester */
 	private $presenterTester;
-
 
 	public function __construct(PresenterTester $presenterTester)
 	{
 		$this->presenterTester = $presenterTester;
 	}
-
 
 	public function testActionDefaultRendersOk()
 	{
@@ -36,7 +35,6 @@ class HomepagePresenterTest extends TestCase
 		]);
 	}
 
-
 	public function testActionFooReturnsNotFound()
 	{
 		$testRequest = $this->presenterTester->createRequest('Homepage')
@@ -47,6 +45,5 @@ class HomepagePresenterTest extends TestCase
 		$testResponse->assertBadRequest(404);
 	}
 }
-
 
 HomepagePresenterTest::run($testContainerFactory);

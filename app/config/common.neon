@@ -3,7 +3,7 @@
 # https://nette.org/security-warning
 #
 extensions:
-	console: Contributte\Console\DI\ConsoleExtension
+	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
 	migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
 
 
@@ -18,9 +18,9 @@ session:
 
 
 database:
-	dsn: 'mysql:host=127.0.0.1;dbname=test'
-	user:
-	password:
+	dsn: 'mysql:host=127.0.0.1;dbname=nette-sandbox-with-mango-tester'
+	user: homestead
+	password: secret
 	options:
 		lazy: yes
 
@@ -36,4 +36,4 @@ services:
 	- App\Forms\FormFactory
 	- App\Forms\SignInFormFactory
 	- App\Forms\SignUpFormFactory
-	router: App\RouterFactory::createRouter
+	router: App\Router\RouterFactory::createRouter

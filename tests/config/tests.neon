@@ -2,7 +2,7 @@ extensions:
 	migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
 	mango.tester: Mangoweb\Tester\Infrastructure\MangoTesterExtension
 	mango.tester.databaseCreator: Mangoweb\Tester\DatabaseCreator\Bridges\NetteDI\DatabaseCreatorExtension
-
+	mango.presenterTester: Mangoweb\Tester\PresenterTester\Bridges\Infrastructure\PresenterTesterExtension
 
 parameters:
 	appContainer:
@@ -11,8 +11,8 @@ parameters:
 			wwwDir: %wwwDir%
 			tempDir: %tempDir%
 		configFiles:
-			- %appDir%/config/config.neon
-			- %appDir%/config/config.local.neon
+			- %appDir%/config/common.neon
+			- %appDir%/config/local.neon
 		databaseConnectionServiceName: database.default.connection
 
 
@@ -24,9 +24,9 @@ migrations:
 
 
 database:
-	dsn: 'mysql:host=127.0.0.1;dbname=test'
-	user:
-	password:
+	dsn: 'mysql:host=127.0.0.1;dbname=nette-sandbox-with-mango-tester'
+	user: homestead
+	password: secret
 	options:
 		lazy: yes
 
