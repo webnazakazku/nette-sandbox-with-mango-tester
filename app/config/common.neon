@@ -17,14 +17,6 @@ session:
 	expiration: 14 days
 
 
-database:
-	dsn: 'mysql:host=127.0.0.1;dbname=nette-sandbox-with-mango-tester'
-	user: homestead
-	password: secret
-	options:
-		lazy: yes
-
-
 migrations:
 	dir: %appDir%/../migrations # migrations base directory
 	driver: mysql               # pgsql or mysql

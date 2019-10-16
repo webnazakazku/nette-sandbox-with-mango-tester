@@ -24,14 +24,6 @@ migrations:
 	dbal: nette                 # nextras, nette, doctrine or dibi
 
 
-database:
-	dsn: 'mysql:host=127.0.0.1;dbname=nette-sandbox-with-mango-tester'
-	user: homestead
-	password: secret
-	options:
-		lazy: yes
-
-
 mango.tester.databaseCreator:
 	driver: mysql
 	dbal: Mangoweb\Tester\DatabaseCreator\Bridges\NextrasMigrations\MySqlNextrasMigrationsDbalAdapter
