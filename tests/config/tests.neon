@@ -3,6 +3,7 @@ extensions:
 	mango.tester: Mangoweb\Tester\Infrastructure\MangoTesterExtension
 	mango.tester.databaseCreator: Mangoweb\Tester\DatabaseCreator\Bridges\NetteDI\DatabaseCreatorExtension
 	mango.presenterTester: Mangoweb\Tester\PresenterTester\Bridges\Infrastructure\PresenterTesterExtension
+	- Mangoweb\Tester\DatabaseCreator\Bridges\Infrastructure\DatabaseCreatorInfrastructureExtension
 
 parameters:
 	appContainer:

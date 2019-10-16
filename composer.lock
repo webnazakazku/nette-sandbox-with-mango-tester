@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10dcceb8105d8fcc47506f954d68769e",
+    "content-hash": "423e8cdcfb755b0fc5d1a7fbbef38e5e",
     "packages": [
         {
             "name": "dg/adminer-custom",
@@ -1641,16 +1641,16 @@
         },
         {
             "name": "mangoweb/tester-infrastructure",
-            "version": "v0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mangoweb-backend/tester-infrastructure.git",
-                "reference": "58db08b259bfb570847edcd9c810bd7bd69ec4e5"
+                "reference": "b0db06b92d875fe56737c2e567b2bb2b8f3314b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mangoweb-backend/tester-infrastructure/zipball/58db08b259bfb570847edcd9c810bd7bd69ec4e5",
-                "reference": "58db08b259bfb570847edcd9c810bd7bd69ec4e5",
+                "url": "https://api.github.com/repos/mangoweb-backend/tester-infrastructure/zipball/b0db06b92d875fe56737c2e567b2bb2b8f3314b9",
+                "reference": "b0db06b92d875fe56737c2e567b2bb2b8f3314b9",
                 "shasum": ""
             },
             "require": {
@@ -1675,7 +1675,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2019-04-08T17:20:36+00:00"
+            "time": "2019-10-08T11:09:20+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -2172,7 +2172,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mangoweb/tester-infrastructure": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
