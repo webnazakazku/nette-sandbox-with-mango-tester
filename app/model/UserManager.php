@@ -9,7 +9,7 @@ use Nette\Security\Passwords;
 /**
  * Users management.
  */
-class UserManager implements Nette\Security\IAuthenticator
+final class UserManager implements Nette\Security\IAuthenticator
 {
 
 	use Nette\SmartObject;
