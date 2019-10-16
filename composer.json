@@ -38,9 +38,10 @@
 		"mockery/mockery": "^1.2",
 		"contributte/console": "^0.7",
 		"nextras/migrations": "^3.0",
-		"mangoweb/presenter-tester": "^0.3",
-		"mangoweb/tester-database-creator": "^0.3",
-		"mangoweb/tester-infrastructure": "@dev"
+		"mangoweb/presenter-tester": "@dev",
+		"mangoweb/tester-database-creator": "@dev",
+		"mangoweb/tester-infrastructure": "@dev",
+		"dg/bypass-finals": "^1.1"
 	},
 	"autoload": {
 		"classmap": ["app/Bootstrap.php"]

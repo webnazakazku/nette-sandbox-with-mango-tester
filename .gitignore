@@ -4,4 +4,5 @@ vendor/*
 !.gitignore
 !.htaccess
 !web.config
-app/config/config.local.neon
+app/config/local.neon
+tests/tests.local.neon

@@ -56,6 +56,10 @@ final class UserManager implements Nette\Security\IAuthenticator
 			]);
 		}
 
+		$this->database->table(self::TABLE_NAME)
+			->where(['id' => $row->id])
+			->update(['last_visited' => new \DateTime()]);
+
 		$arr = $row->toArray();
 		unset($arr[self::COLUMN_PASSWORD_HASH]);
 		return new Nette\Security\Identity($row[self::COLUMN_ID], $row[self::COLUMN_ROLE], $arr);

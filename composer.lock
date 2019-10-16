@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "423e8cdcfb755b0fc5d1a7fbbef38e5e",
+    "content-hash": "71545238f5eb621c9c9519fae00badc0",
     "packages": [
         {
             "name": "dg/adminer-custom",
@@ -1510,6 +1510,54 @@
             "time": "2019-06-27T18:23:41+00:00"
         },
         {
+            "name": "dg/bypass-finals",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dg/bypass-finals.git",
+                "reference": "101d0cc4b836d2a7745d745bc7b1fadcdcaf3b22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dg/bypass-finals/zipball/101d0cc4b836d2a7745d745bc7b1fadcdcaf3b22",
+                "reference": "101d0cc4b836d2a7745d745bc7b1fadcdcaf3b22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "nette/tester": "^2.0.2"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                }
+            ],
+            "description": "Removes final keyword from source code on-the-fly and allows mocking of final methods and classes",
+            "keywords": [
+                "finals",
+                "mocking",
+                "phpunit",
+                "testing",
+                "unit"
+            ],
+            "time": "2019-06-03T14:06:19+00:00"
+        },
+        {
             "name": "hamcrest/hamcrest-php",
             "version": "v2.0.0",
             "source": {
@@ -1559,7 +1607,7 @@
         },
         {
             "name": "mangoweb/presenter-tester",
-            "version": "v0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mangoweb-backend/presenter-tester.git",
@@ -1599,16 +1647,16 @@
         },
         {
             "name": "mangoweb/tester-database-creator",
-            "version": "v0.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mangoweb-backend/tester-database-creator.git",
-                "reference": "f41d9fe266aa591798ecdd991cd0db477c99265f"
+                "reference": "c1ec01cb7f56b1df26a7fd50309e9fef5175f6c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mangoweb-backend/tester-database-creator/zipball/f41d9fe266aa591798ecdd991cd0db477c99265f",
-                "reference": "f41d9fe266aa591798ecdd991cd0db477c99265f",
+                "url": "https://api.github.com/repos/mangoweb-backend/tester-database-creator/zipball/c1ec01cb7f56b1df26a7fd50309e9fef5175f6c8",
+                "reference": "c1ec01cb7f56b1df26a7fd50309e9fef5175f6c8",
                 "shasum": ""
             },
             "require": {
@@ -1637,7 +1685,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2019-04-08T17:20:52+00:00"
+            "time": "2019-04-09T17:13:31+00:00"
         },
         {
             "name": "mangoweb/tester-infrastructure",
@@ -2173,6 +2221,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mangoweb/presenter-tester": 20,
+        "mangoweb/tester-database-creator": 20,
         "mangoweb/tester-infrastructure": 20
     },
     "prefer-stable": false,

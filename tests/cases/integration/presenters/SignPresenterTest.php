@@ -33,7 +33,7 @@ class SignPresenterTest extends TestCase
 		$testResponse = $this->presenterTester->execute($testRequest);
 		$testResponse->assertRenders([
 			'Sign In',
-			'<form class=form-horizontal action="%a%" method="post" id="frm-signInForm">'
+			'<form class=form-horizontal action="%S%" method="post" id="frm-signInForm">'
 		]);
 	}
 
@@ -56,129 +56,124 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertFormValid('signInForm');
 		$testResponse->assertRedirects('Homepage');
 	}
-	/* public function testSignInFormSentWithWrongPassword(Nette\Database\Context $ntb)
-	  {
-	  $ntb->table('users')->insert([
-	  'username' => 'dave',
-	  'password' => password_hash('correct horse battery staple', PASSWORD_BCRYPT),
-	  'email' => 'dave@example.com',
-	  ]);
 
-	  $testRequest = $this->presenterTester->createRequest('Sign')
-	  ->withParameters(['action' => 'in'])
-	  ->withForm('signInForm', [
-	  'username' => 'dave',
-	  'password' => 'wrong password',
-	  ]);
+	public function testSignInFormSentWithWrongPassword(Nette\Database\Context $ntb)
+	{
+		$ntb->table('users')->insert([
+			'username' => 'dave',
+			'password' => password_hash('correct horse battery staple', PASSWORD_BCRYPT),
+			'email' => 'dave@example.com',
+		]);
 
-	  $testResponse = $this->presenterTester->execute($testRequest);
-	  $testResponse->assertFormHasErrors('signInForm', ['The username or password you entered is incorrect.']);
-	  $testResponse->assertRenders();
-	  }
+		$testRequest = $this->presenterTester->createRequest('Sign')
+			->withParameters(['action' => 'in'])
+			->withForm('signInForm', [
+			'username' => 'dave',
+			'password' => 'wrong password',
+		]);
 
+		$testResponse = $this->presenterTester->execute($testRequest);
+		$testResponse->assertFormHasErrors('signInForm', ['The username or password you entered is incorrect.']);
+		$testResponse->assertRenders();
+	}
 
-	  public function testSignInFormSentWithEmptyPassword()
-	  {
-	  $testRequest = $this->presenterTester->createRequest('Sign')
-	  ->withParameters(['action' => 'in'])
-	  ->withForm('signInForm', [
-	  'username' => 'dave',
-	  'password' => '',
-	  ]);
+	public function testSignInFormSentWithEmptyPassword()
+	{
+		$testRequest = $this->presenterTester->createRequest('Sign')
+			->withParameters(['action' => 'in'])
+			->withForm('signInForm', [
+			'username' => 'dave',
+			'password' => '',
+		]);
 
-	  $testResponse = $this->presenterTester->execute($testRequest);
-	  $testResponse->assertFormHasErrors('signInForm', ['Please enter your password.']);
-	  $testResponse->assertRenders();
-	  }
+		$testResponse = $this->presenterTester->execute($testRequest);
+		$testResponse->assertFormHasErrors('signInForm', ['Please enter your password.']);
+		$testResponse->assertRenders();
+	}
 
+	public function testSignUpActionRenders()
+	{
+		$testRequest = $this->presenterTester->createRequest('Sign')
+			->withParameters(['action' => 'up']);
 
-	  public function testSignUpActionRenders()
-	  {
-	  $testRequest = $this->presenterTester->createRequest('Sign')
-	  ->withParameters(['action' => 'up']);
+		$testResponse = $this->presenterTester->execute($testRequest);
+		$testResponse->assertRenders([
+			'Sign Up',
+			'<form class=form-horizontal action="%S%" method="post" id="frm-signUpForm">'
+		]);
+	}
 
-	  $testResponse = $this->presenterTester->execute($testRequest);
-	  $testResponse->assertRenders([
-	  'Sign Up',
-	  '<form action="%S%" method="post" id="frm-signUpForm">'
-	  ]);
-	  }
+	public function testSignUpFormSentOk()
+	{
+		$testRequest = $this->presenterTester->createRequest('Sign')
+			->withParameters(['action' => 'up'])
+			->withForm('signUpForm', [
+			'username' => 'dave',
+			'password' => 'correct horse battery staple',
+			'email' => 'dave@example.com',
+		]);
 
+		$testResponse = $this->presenterTester->execute($testRequest);
+		$testResponse->assertFormValid('signUpForm');
+		$testResponse->assertRedirects('Homepage');
+	}
 
-	  public function testSignUpFormSentOk()
-	  {
-	  $testRequest = $this->presenterTester->createRequest('Sign')
-	  ->withParameters(['action' => 'up'])
-	  ->withForm('signUpForm', [
-	  'username' => 'dave',
-	  'password' => 'correct horse battery staple',
-	  'email' => 'dave@example.com',
-	  ]);
+	public function testSignUpFormSentWithDuplicateUsername(Nette\Database\Context $ntb)
+	{
+		$ntb->table('users')->insert([
+			'username' => 'dave',
+			'password' => password_hash('does not matter', PASSWORD_BCRYPT),
+			'email' => 'also-does-not-matter@example.com',
+		]);
 
-	  $testResponse = $this->presenterTester->execute($testRequest);
-	  $testResponse->assertFormValid('signUpForm');
-	  $testResponse->assertRedirects('Homepage');
-	  }
+		$testRequest = $this->presenterTester->createRequest('Sign')
+			->withParameters(['action' => 'up'])
+			->withForm('signUpForm', [
+			'username' => 'dave',
+			'password' => 'correct horse battery staple',
+			'email' => 'dave@example.com',
+		]);
 
+		$testResponse = $this->presenterTester->execute($testRequest);
+		$testResponse->assertFormHasErrors('signUpForm', ['Username is already taken.']);
+		$testResponse->assertRenders();
+	}
 
-	  public function testSignUpFormSentWithDuplicateUsername(Nette\Database\Context $ntb)
-	  {
-	  $ntb->table('users')->insert([
-	  'username' => 'dave',
-	  'password' => password_hash('does not matter', PASSWORD_BCRYPT),
-	  'email' => 'also-does-not-matter@example.com',
-	  ]);
+	public function testSignUpFormSentWithShortPassword()
+	{
+		$testRequest = $this->presenterTester->createRequest('Sign')
+			->withParameters(['action' => 'up'])
+			->withForm('signUpForm', [
+			'username' => 'dave',
+			'password' => 'short',
+			'email' => 'johny@example.com',
+		]);
 
-	  $testRequest = $this->presenterTester->createRequest('Sign')
-	  ->withParameters(['action' => 'up'])
-	  ->withForm('signUpForm', [
-	  'username' => 'dave',
-	  'password' => 'correct horse battery staple',
-	  'email' => 'dave@example.com',
-	  ]);
+		$testResponse = $this->presenterTester->execute($testRequest);
+		$testResponse->assertFormHasErrors('signUpForm', ['Please enter at least 7 characters.']);
+		$testResponse->assertRenders();
+	}
 
-	  $testResponse = $this->presenterTester->execute($testRequest);
-	  $testResponse->assertFormHasErrors('signUpForm', ['Username is already taken.']);
-	  $testResponse->assertRenders();
-	  }
-
-
-	  public function testSignUpFormSentWithShortPassword()
-	  {
-	  $testRequest = $this->presenterTester->createRequest('Sign')
-	  ->withParameters(['action' => 'up'])
-	  ->withForm('signUpForm', [
-	  'username' => 'dave',
-	  'password' => 'short',
-	  'email' => 'johny@example.com',
-	  ]);
-
-	  $testResponse = $this->presenterTester->execute($testRequest);
-	  $testResponse->assertFormHasErrors('signUpForm', ['Please enter at least 7 characters.']);
-	  $testResponse->assertRenders();
-	  }
-
-
-	  /**
+	/**
 	 * @param UserManager|MockInterface $userManager
-	 * /
-	  public function testSignUpFormSentOkWithMockedUserManager(UserManager $userManager)
-	  {
-	  $userManager->shouldReceive('add')
-	  ->withArgs(['dave', 'dave@example.com', 'lorem ipsum']);
+	 */
+	public function testSignUpFormSentOkWithMockedUserManager(UserManager $userManager)
+	{
+		$userManager->shouldReceive('add')
+			->withArgs(['dave', 'dave@example.com', 'lorem ipsum']);
 
-	  $testRequest = $this->presenterTester->createRequest('Sign')
-	  ->withParameters(['action' => 'up'])
-	  ->withForm('signUpForm', [
-	  'username' => 'dave',
-	  'password' => 'lorem ipsum',
-	  'email' => 'dave@example.com',
-	  ]);
+		$testRequest = $this->presenterTester->createRequest('Sign')
+			->withParameters(['action' => 'up'])
+			->withForm('signUpForm', [
+			'username' => 'dave',
+			'password' => 'lorem ipsum',
+			'email' => 'dave@example.com',
+		]);
 
-	  $testResponse = $this->presenterTester->execute($testRequest);
-	  $testResponse->assertFormValid('signUpForm');
-	  $testResponse->assertRedirects('Homepage');
-	  } */
+		$testResponse = $this->presenterTester->execute($testRequest);
+		$testResponse->assertFormValid('signUpForm');
+		$testResponse->assertRedirects('Homepage');
+	}
 }
 
 SignPresenterTest::run($testContainerFactory);

@@ -1,5 +1,4 @@
 <?php
-
 declare(strict_types=1);
 
 namespace App\Forms;
@@ -8,9 +7,9 @@ use Nette;
 use Nette\Application\UI\Form;
 use Nette\Security\User;
 
-
 final class SignInFormFactory
 {
+
 	use Nette\SmartObject;
 
 	/** @var FormFactory */
@@ -19,13 +18,11 @@ final class SignInFormFactory
 	/** @var User */
 	private $user;
 
-
 	public function __construct(FormFactory $factory, User $user)
 	{
 		$this->factory = $factory;
 		$this->user = $user;
 	}
-
 
 	public function create(callable $onSuccess): Form
 	{
@@ -48,6 +45,7 @@ final class SignInFormFactory
 				$form->addError('The username or password you entered is incorrect.');
 				return;
 			}
+
 			$onSuccess();
 		};
 

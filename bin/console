@@ -1,10 +1,10 @@
 #!/usr/bin/env php
 <?php
+declare(strict_types=1);
 
-$dic = require __DIR__ . '/../app/bootstrap.php';
-assert($dic instanceof Nette\DI\Container);
+require __DIR__ . '/../vendor/autoload.php';
 
-$app = $dic->getByType(Contributte\Console\Application::class);
-$exitCode = $app->run();
-
-exit($exitCode);
+exit(App\Bootstrap::boot()
+		->createContainer()
+		->getByType(Contributte\Console\Application::class)
+		->run());
