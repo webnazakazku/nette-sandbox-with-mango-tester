@@ -1,0 +1,29 @@
+language: php
+
+php:
+  - 7.2
+
+env:
+    - MYSQL_ROOT_PASSWORD=""
+    - MYSQL_DATABASE="nette-sandbox-with-mango-tester"
+
+services:
+  - mysql
+
+before_script:
+  - composer self-update
+
+install:
+  - composer install --prefer-source --no-interaction --dev
+
+before_script:
+  - mysql -u root -e 'CREATE DATABASE `nette-sandbox-with-mango-tester`;'
+  - cp ./tests/config/tests.local_travis.neon ./app/config/config.local.neon
+  - cp ./tests/config/tests.local_travis.neon ./tests/config/tests.local.neon
+
+script:
+  - ./vendor/bin/tester -s ./tests/
+
+after_failure:
+  # Vytiskne obsah souborů *.actual
+  - for i in $(find ./tests -name \*.actual); do echo "--- $i"; cat $i; echo; echo; done
