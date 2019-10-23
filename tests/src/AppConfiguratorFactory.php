@@ -1,4 +1,5 @@
-<?php declare(strict_types = 1);
+<?php
+declare(strict_types=1);
 
 namespace AppTests;
 
@@ -7,18 +8,16 @@ use Mangoweb\Tester\Infrastructure\Container\IAppConfiguratorFactory;
 use Nette\Configurator;
 use Nette\DI\Container;
 
-
 class AppConfiguratorFactory implements IAppConfiguratorFactory
 {
+
 	/** @var DatabaseCreator */
 	private $databaseCreator;
-
 
 	public function __construct(DatabaseCreator $databaseCreator)
 	{
 		$this->databaseCreator = $databaseCreator;
 	}
-
 
 	public function create(Container $testContainer): Configurator
 	{
@@ -28,6 +27,10 @@ class AppConfiguratorFactory implements IAppConfiguratorFactory
 		$configurator = new Configurator;
 		$configurator->setDebugMode(TRUE);
 		$configurator->setTempDirectory($testContainerParameters['tempDir']);
+
+		$configurator->addParameters([
+			'appDir' => __DIR__ . '/../../app',
+		]);
 
 		$configurator->addConfig("$testContainerParameters[appDir]/config/config.neon");
 		$configurator->addConfig("$testContainerParameters[appDir]/config/config.local.neon");
@@ -46,5 +49,4 @@ class AppConfiguratorFactory implements IAppConfiguratorFactory
 
 		return $configurator;
 	}
-
 }
