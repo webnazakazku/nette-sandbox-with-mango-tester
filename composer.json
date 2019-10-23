@@ -31,16 +31,17 @@
 		"nette/utils": "^2.4",
 		"latte/latte": "^2.4",
 		"tracy/tracy": "^2.4",
-		"dg/adminer-custom": "^1.9"
+		"dg/adminer-custom": "^1.9",
+		"kdyby/translation": "^2.6"
 	},
 	"require-dev": {
 		"nette/tester": "^2.0",
 		"mockery/mockery": "^1.0",
 		"contributte/console": "^0.2",
-		"nextras/migrations": "dev-master",
-		"mangoweb/presenter-tester": "dev-master",
-		"mangoweb/tester-database-creator": "dev-master",
-		"mangoweb/tester-infrastructure": "dev-master"
+		"nextras/migrations": "^3.0",
+		"mangoweb/presenter-tester": "^0.2",
+		"mangoweb/tester-database-creator": "^0.2",
+		"mangoweb/tester-infrastructure": "^0.2"
 	},
 	"minimum-stability": "stable"
 }

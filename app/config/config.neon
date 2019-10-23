@@ -5,7 +5,7 @@
 extensions:
 	console: Contributte\Console\DI\ConsoleExtension
 	migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
-
+	translation: Kdyby\Translation\DI\TranslationExtension
 
 application:
 	errorPresenter: Error
@@ -29,6 +29,11 @@ migrations:
 	dir: %appDir%/../migrations # migrations base directory
 	driver: mysql               # pgsql or mysql
 	dbal: nette                 # nextras, nette, doctrine or dibi
+
+
+translation:
+	default: en
+	fallback: [cs_CZ, cs]
 
 
 services:

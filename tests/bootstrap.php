@@ -1,4 +1,5 @@
-<?php declare(strict_types = 1);
+<?php
+declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -20,6 +21,9 @@ $configurator->defaultExtensions = [
 
 $configurator->setDebugMode(true);
 $configurator->setTempDirectory(__DIR__ . '/../temp/tests');
+
+@mkdir(__DIR__ . '/../temp/tests/log', 0777, true);
+$configurator->enableDebugger(__DIR__ . '/../temp/tests/log');
 
 $configurator->createRobotLoader()
 	->addDirectory(__DIR__ . '/../app')
