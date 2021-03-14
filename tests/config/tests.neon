@@ -2,9 +2,9 @@ extensions:
 	migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
 	mango.tester: Mangoweb\Tester\Infrastructure\MangoTesterExtension
 	mango.tester.presenterTester: Mangoweb\Tester\PresenterTester\Bridges\Infrastructure\PresenterTesterExtension
+	- Mangoweb\Tester\HttpMocks\Bridges\Infrastructure\HttpExtension
 	mango.tester.databaseCreator: Mangoweb\Tester\DatabaseCreator\Bridges\NetteDI\DatabaseCreatorExtension
 	mango.tester.databaseCreatorInfrastructure: Mangoweb\Tester\DatabaseCreator\Bridges\Infrastructure\DatabaseCreatorInfrastructureExtension
-
 
 parameters:
 	appContainer:

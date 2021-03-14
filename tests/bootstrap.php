@@ -2,6 +2,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
+DG\BypassFinals::enable();
+
 $configurator = new Nette\Configurator;
 
 // we need to override defaultExtensions because Nette\Configurator registers

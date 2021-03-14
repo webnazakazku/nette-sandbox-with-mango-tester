@@ -47,7 +47,7 @@ jobs:
         run: composer install --no-progress --prefer-dist --optimize-autoloader
       - name: Prepare configuration files
         run: |
-          cp app/config/config.local.ci.neon app/config/config.local.neon
+          cp app/config/local.ci.neon app/config/local.neon
           cp tests/config/tests.local.ci.neon tests/config/tests.local.neon
       - name: Run Migrations
         run: php bin/console migrations:continue
