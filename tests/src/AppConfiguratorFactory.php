@@ -31,9 +31,10 @@ class AppConfiguratorFactory implements IAppConfiguratorFactory
 
 		$configurator->addConfig("$testContainerParameters[appDir]/config/config.neon");
 		$configurator->addConfig("$testContainerParameters[appDir]/config/config.local.neon");
+		$testDatabaseHost = $testContainerParameters['dbHost'] . ':' . $testContainerParameters['dbPort'];
 		$configurator->addConfig([
 			'database' => [
-				'dsn' => sprintf('mysql:host=127.0.0.1;dbname=%s', $testDatabaseName),
+				'dsn' => sprintf('mysql:host=%s;dbname=%s', $testDatabaseHost, $testDatabaseName),
 			],
 			'services' => [
 				'database.default.connection' => [
