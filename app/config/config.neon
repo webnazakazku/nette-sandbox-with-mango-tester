@@ -29,7 +29,7 @@ migrations:
 	dir: %appDir%/../migrations # migrations base directory
 	driver: mysql               # pgsql or mysql
 	dbal: nette                 # nextras, nette, doctrine or dibi
-
+	withDummyData: yes
 
 services:
 	- App\Model\UserManager
