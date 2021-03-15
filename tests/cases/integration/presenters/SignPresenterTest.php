@@ -34,7 +34,7 @@ class SignPresenterTest extends TestCase
 		$testResponse = $this->presenterTester->execute($testRequest);
 		$testResponse->assertRenders([
 			'Sign In',
-			'<form action="%S%" method="post" id="frm-signInForm">'
+			'<form class=form-horizontal action="%S%" method="post" id="frm-signInForm">'
 		]);
 	}
 
@@ -104,7 +104,7 @@ class SignPresenterTest extends TestCase
 		$testResponse = $this->presenterTester->execute($testRequest);
 		$testResponse->assertRenders([
 			'Sign Up',
-			'<form action="%S%" method="post" id="frm-signUpForm">'
+			'<form class=form-horizontal action="%S%" method="post" id="frm-signUpForm">'
 		]);
 	}
 
