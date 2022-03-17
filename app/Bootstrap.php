@@ -1,17 +1,16 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App;
 
 use Nette\Configurator;
-
+use Tester\Environment;
 
 class Bootstrap
 {
+
 	public static function boot(): Configurator
 	{
-		$configurator = new Configurator;
+		$configurator = new Configurator();
 
 		$configurator->setDebugMode(true);
 		$configurator->enableTracy(__DIR__ . '/../log');
@@ -34,7 +33,8 @@ class Bootstrap
 	public static function bootForTests(): Configurator
 	{
 		$configurator = self::boot();
-		\Tester\Environment::setup();
+		Environment::setup();
 		return $configurator;
 	}
+
 }

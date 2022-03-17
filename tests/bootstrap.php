@@ -4,7 +4,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 DG\BypassFinals::enable();
 
-$configurator = new Nette\Configurator;
+$configurator = new Nette\Configurator();
 
 // we need to override defaultExtensions because Nette\Configurator registers
 // butch of extensions we don't need and that clash with the Mango Tester

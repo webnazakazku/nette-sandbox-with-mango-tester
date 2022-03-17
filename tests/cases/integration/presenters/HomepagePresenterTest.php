@@ -2,8 +2,8 @@
 
 namespace AppTests\Presenters;
 
-use Mangoweb\Tester\Infrastructure\TestCase;
-use Mangoweb\Tester\PresenterTester\PresenterTester;
+use Webnazakazku\MangoTester\Infrastructure\TestCase;
+use Webnazakazku\MangoTester\PresenterTester\PresenterTester;
 
 $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
 
@@ -13,17 +13,16 @@ $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
  */
 class HomepagePresenterTest extends TestCase
 {
+
 	/** @var PresenterTester */
 	private $presenterTester;
-
 
 	public function __construct(PresenterTester $presenterTester)
 	{
 		$this->presenterTester = $presenterTester;
 	}
 
-
-	public function testActionDefaultRendersOk()
+	public function testActionDefaultRendersOk(): void
 	{
 		$testRequest = $this->presenterTester->createRequest('Homepage');
 
@@ -36,8 +35,7 @@ class HomepagePresenterTest extends TestCase
 		]);
 	}
 
-
-	public function testActionFooReturnsNotFound()
+	public function testActionFooReturnsNotFound(): void
 	{
 		$testRequest = $this->presenterTester->createRequest('Homepage')
 			->withParameters(['action' => 'foo']);
@@ -46,7 +44,7 @@ class HomepagePresenterTest extends TestCase
 
 		$testResponse->assertBadRequest(404);
 	}
-}
 
+}
 
 HomepagePresenterTest::run($testContainerFactory);

@@ -3,10 +3,10 @@
 namespace AppTests\Presenters;
 
 use App\Model\UserManager;
-use Mangoweb\Tester\Infrastructure\TestCase;
-use Mangoweb\Tester\PresenterTester\PresenterTester;
 use Mockery\MockInterface;
 use Nette;
+use Webnazakazku\MangoTester\Infrastructure\TestCase;
+use Webnazakazku\MangoTester\PresenterTester\PresenterTester;
 
 $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
 
@@ -16,17 +16,16 @@ $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
  */
 class SignPresenterTest extends TestCase
 {
+
 	/** @var PresenterTester */
 	private $presenterTester;
-
 
 	public function __construct(PresenterTester $presenterTester)
 	{
 		$this->presenterTester = $presenterTester;
 	}
 
-
-	public function testSignInActionRenders()
+	public function testSignInActionRenders(): void
 	{
 		$testRequest = $this->presenterTester->createRequest('Sign')
 			->withParameters(['action' => 'in']);
@@ -34,12 +33,11 @@ class SignPresenterTest extends TestCase
 		$testResponse = $this->presenterTester->execute($testRequest);
 		$testResponse->assertRenders([
 			'Sign In',
-			'<form class=form-horizontal action="%S%" method="post" id="frm-signInForm">'
+			'<form class=form-horizontal action="%S%" method="post" id="frm-signInForm">',
 		]);
 	}
 
-
-	public function testSignInFormSentOk(Nette\Database\Context $ntb)
+	public function testSignInFormSentOk(Nette\Database\Context $ntb): void
 	{
 		$ntb->table('users')->insert([
 			'username' => 'dave',
@@ -59,8 +57,7 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertRedirects('Homepage');
 	}
 
-
-	public function testSignInFormSentWithWrongPassword(Nette\Database\Context $ntb)
+	public function testSignInFormSentWithWrongPassword(Nette\Database\Context $ntb): void
 	{
 		$ntb->table('users')->insert([
 			'username' => 'dave',
@@ -80,8 +77,7 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertRenders();
 	}
 
-
-	public function testSignInFormSentWithEmptyPassword()
+	public function testSignInFormSentWithEmptyPassword(): void
 	{
 		$testRequest = $this->presenterTester->createRequest('Sign')
 			->withParameters(['action' => 'in'])
@@ -95,8 +91,7 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertRenders();
 	}
 
-
-	public function testSignUpActionRenders()
+	public function testSignUpActionRenders(): void
 	{
 		$testRequest = $this->presenterTester->createRequest('Sign')
 			->withParameters(['action' => 'up']);
@@ -104,12 +99,11 @@ class SignPresenterTest extends TestCase
 		$testResponse = $this->presenterTester->execute($testRequest);
 		$testResponse->assertRenders([
 			'Sign Up',
-			'<form class=form-horizontal action="%S%" method="post" id="frm-signUpForm">'
+			'<form class=form-horizontal action="%S%" method="post" id="frm-signUpForm">',
 		]);
 	}
 
-
-	public function testSignUpFormSentOk()
+	public function testSignUpFormSentOk(): void
 	{
 		$testRequest = $this->presenterTester->createRequest('Sign')
 			->withParameters(['action' => 'up'])
@@ -124,8 +118,7 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertRedirects('Homepage');
 	}
 
-
-	public function testSignUpFormSentWithDuplicateUsername(Nette\Database\Context $ntb)
+	public function testSignUpFormSentWithDuplicateUsername(Nette\Database\Context $ntb): void
 	{
 		$ntb->table('users')->insert([
 			'username' => 'dave',
@@ -146,8 +139,7 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertRenders();
 	}
 
-
-	public function testSignUpFormSentWithShortPassword()
+	public function testSignUpFormSentWithShortPassword(): void
 	{
 		$testRequest = $this->presenterTester->createRequest('Sign')
 			->withParameters(['action' => 'up'])
@@ -162,11 +154,10 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertRenders();
 	}
 
-
 	/**
 	 * @param UserManager|MockInterface $userManager
 	 */
-	public function testSignUpFormSentOkWithMockedUserManager(UserManager $userManager)
+	public function testSignUpFormSentOkWithMockedUserManager(UserManager $userManager): void
 	{
 		$userManager->shouldReceive('add')
 			->withArgs(['dave', 'dave@example.com', 'lorem ipsum']);
@@ -183,7 +174,7 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertFormValid('signUpForm');
 		$testResponse->assertRedirects('Homepage');
 	}
-}
 
+}
 
 SignPresenterTest::run($testContainerFactory);

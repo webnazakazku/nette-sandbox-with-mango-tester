@@ -51,5 +51,9 @@ jobs:
           cp tests/config/tests.local.ci.neon tests/config/tests.local.neon
       - name: Run Migrations
         run: php bin/console migrations:continue
+      - name: Run CS
+        run: vendor/bin/codesniffer app tests
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse app -c phpstan.neon
       - name: Run Tests
         run: vendor/bin/tester -C tests

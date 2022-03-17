@@ -1,0 +1,20 @@
+includes:
+    - vendor/phpstan/phpstan-deprecation-rules/rules.neon
+    - vendor/phpstan/phpstan-mockery/extension.neon
+    - vendor/phpstan/phpstan-nette/extension.neon
+    - vendor/phpstan/phpstan-nette/rules.neon
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+
+parameters:
+    level: 8
+
+    ignoreErrors:
+        -
+            message: "#^Call to an undefined method App\\\\Model\\\\UserManager\\:\\:shouldReceive\\(\\)\\.$#"
+            count: 1
+            path: tests/cases/integration/presenters/SignPresenterTest.php
+
+        -
+            message: "#^PHPDoc tag @param for parameter \\$userManager contains unresolvable type\\.$#"
+            count: 1
+            path: tests/cases/integration/presenters/SignPresenterTest.php

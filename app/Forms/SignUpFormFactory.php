@@ -1,16 +1,15 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types = 1);
 
 namespace App\Forms;
 
 use App\Model;
 use Nette;
 use Nette\Application\UI\Form;
-
+use stdClass;
 
 final class SignUpFormFactory
 {
+
 	use Nette\SmartObject;
 
 	private const PASSWORD_MIN_LENGTH = 7;
@@ -21,13 +20,11 @@ final class SignUpFormFactory
 	/** @var Model\UserManager */
 	private $userManager;
 
-
 	public function __construct(FormFactory $factory, Model\UserManager $userManager)
 	{
 		$this->factory = $factory;
 		$this->userManager = $userManager;
 	}
-
 
 	public function create(callable $onSuccess): Form
 	{
@@ -45,16 +42,18 @@ final class SignUpFormFactory
 
 		$form->addSubmit('send', 'Sign up');
 
-		$form->onSuccess[] = function (Form $form, \stdClass $values) use ($onSuccess): void {
+		$form->onSuccess[] = function (Form $form, stdClass $values) use ($onSuccess): void {
 			try {
 				$this->userManager->add($values->username, $values->email, $values->password);
 			} catch (Model\DuplicateNameException $e) {
-				$form['username']->addError('Username is already taken.');
+				$form->addError('Username is already taken.');
 				return;
 			}
+
 			$onSuccess();
 		};
 
 		return $form;
 	}
+
 }

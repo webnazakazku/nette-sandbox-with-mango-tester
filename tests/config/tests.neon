@@ -1,10 +1,10 @@
 extensions:
 	migrations: Nextras\Migrations\Bridges\NetteDI\MigrationsExtension
-	mango.tester: Mangoweb\Tester\Infrastructure\MangoTesterExtension
-	mango.tester.presenterTester: Mangoweb\Tester\PresenterTester\Bridges\Infrastructure\PresenterTesterExtension
-	- Mangoweb\Tester\HttpMocks\Bridges\Infrastructure\HttpExtension
-	mango.tester.databaseCreator: Mangoweb\Tester\DatabaseCreator\Bridges\NetteDI\DatabaseCreatorExtension
-	mango.tester.databaseCreatorInfrastructure: Mangoweb\Tester\DatabaseCreator\Bridges\Infrastructure\DatabaseCreatorInfrastructureExtension
+	mango.tester: Webnazakazku\MangoTester\Infrastructure\MangoTesterExtension
+	mango.tester.presenterTester: Webnazakazku\MangoTester\PresenterTester\Bridges\Infrastructure\PresenterTesterExtension
+	- Webnazakazku\MangoTester\HttpMocks\Bridges\Infrastructure\HttpExtension
+	mango.tester.databaseCreator: Webnazakazku\MangoTester\DatabaseCreator\Bridges\NetteDI\DatabaseCreatorExtension
+	mango.tester.databaseCreatorInfrastructure: Webnazakazku\MangoTester\DatabaseCreator\Bridges\Infrastructure\DatabaseCreatorInfrastructureExtension
 
 parameters:
 	appContainer:
@@ -35,8 +35,8 @@ database:
 
 mango.tester.databaseCreator:
 	driver: mysql
-	dbal: Mangoweb\Tester\DatabaseCreator\Bridges\NextrasMigrations\MySqlNextrasMigrationsDbalAdapter
-	migrations: Mangoweb\Tester\DatabaseCreator\Bridges\NextrasMigrations\NextrasMigrationsDriver
+	dbal: Webnazakazku\MangoTester\DatabaseCreator\Bridges\NextrasMigrations\MySqlNextrasMigrationsDbalAdapter
+	migrations: Webnazakazku\MangoTester\DatabaseCreator\Bridges\NextrasMigrations\NextrasMigrationsDriver
 	strategy: reset
 
 
