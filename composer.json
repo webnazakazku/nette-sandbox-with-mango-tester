@@ -15,37 +15,36 @@
 		}
 	],
 	"require": {
-		"php": ">=7.2",
-		"nette/application": "~3.1.0",
-		"nette/bootstrap": "~3.1.0",
-		"nette/caching": "~3.1.0",
-		"nette/database": "~3.1.0",
-		"nette/di": "~3.0.5",
-		"nette/finder": "^2.5",
-		"nette/forms": "~3.1.0",
-		"nette/http": "~3.1.0",
-		"nette/mail": "^3.0",
-		"nette/robot-loader": "^3.0",
-		"nette/safe-stream": "^2.4",
-		"nette/security": "~3.1.0",
-		"nette/utils": "^3.0",
-		"latte/latte": "^2.5",
-		"tracy/tracy": "~2.9.0",
-		"dg/adminer-custom": "^1.8",
-		"contributte/console": "^0.9.0",
+		"php": ">=8.1",
+		"nette/application": "~3.2.0",
+		"nette/bootstrap": "~3.2.0",
+		"nette/caching": "~3.3.0",
+		"nette/database": "~3.2.0",
+		"nette/di": "~3.2.0",
+		"nette/finder": "^3.0",
+		"nette/forms": "~3.2.0",
+		"nette/http": "3.3.0",
+		"nette/mail": "^4.0",
+		"nette/robot-loader": "^4.0",
+		"nette/security": "~3.2.0",
+		"nette/utils": "^4.0",
+		"latte/latte": "^3.0",
+		"tracy/tracy": "~2.10.0",
+		"dg/adminer-custom": "^2.0",
+		"contributte/console": "^0.10.0",
 		"nextras/migrations": "^3.1"
 	},
 	"require-dev": {
-		"nette/tester": "~2.4.0",
+		"nette/tester": "~2.5.0",
 		"phpstan/phpstan": "^1.0",
 		"phpstan/phpstan-deprecation-rules": "^1.0",
 		"phpstan/phpstan-doctrine": "^1.0",
 		"phpstan/phpstan-mockery": "^1.0",
 		"phpstan/phpstan-nette": "^1.0",
 		"phpstan/phpstan-strict-rules": "^1.0",
-		"ninjify/qa": "^0.13",
+		"contributte/qa": "^0.3",
 		"mockery/mockery": "^1.0",
-		"webnazakazku/mango-tester-http-mocks": "^0.4",
+		"webnazakazku/mango-tester-http-mocks": "dev-master",
 		"webnazakazku/mango-presenter-tester": "^0.4",
 		"webnazakazku/mango-tester-database-creator": "^0.4",
 		"webnazakazku/mango-tester-infrastructure": "^0.6",
@@ -61,6 +60,9 @@
 		"phpstan": "phpstan analyse"
 	},
 	"config": {
+		"platform": {
+			"php": "8.1.2"
+		},
 		"allow-plugins": {
 			"dealerdirect/phpcodesniffer-composer-installer": true
 		}

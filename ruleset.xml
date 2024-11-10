@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <ruleset>
-    <!-- Contributte Coding Standard -->
-    <rule ref="./vendor/ninjify/coding-standard/contributte.xml"/>
+    <!-- Extending rulesets -->
+    <rule ref="./vendor/contributte/qa/ruleset.xml"/>
+
+    <arg name="extensions" value="php,phpt"/>
 
     <!-- Specific rules -->
     <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
@@ -10,11 +12,18 @@
                 app=>App,
 				tests/cases/integration/presenters=>AppTests\Presenters,
 				tests/src=>AppTests,
-			"/>
-            <property name="extensions" type="array" value="php,php"/>
+            "/>
+            <property name="extensions" type="array" value="php,phpt"/>
         </properties>
     </rule>
 
-    <!-- Exclude folders -->
-    <exclude-pattern>/tests/tmp</exclude-pattern>
+    <rule ref="./vendor/contributte/qa/ruleset.xml">
+        <!-- Exclude specific rules from imported ruleset -->
+        <exclude name="SlevomatCodingStandard.Classes.ClassStructure.IncorrectGroupOrder" />
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName">
+        <exclude-pattern>tests/*.php</exclude-pattern>
+    </rule>
+
 </ruleset>

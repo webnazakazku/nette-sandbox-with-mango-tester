@@ -2,24 +2,23 @@
 
 namespace AppTests;
 
-use Nette\Configurator;
-use Nette\DI\Container;
-use Nette\DI\Definitions\Statement;
+use Nette\Bootstrap\Configurator;
+use Nette\DI\Container as DIContainer;
+use Nette\DI\Definitions\Statement as DIStatement;
 use Webnazakazku\MangoTester\DatabaseCreator\DatabaseCreator;
 use Webnazakazku\MangoTester\Infrastructure\Container\IAppConfiguratorFactory;
 
 class AppConfiguratorFactory implements IAppConfiguratorFactory
 {
 
-	/** @var DatabaseCreator */
-	private $databaseCreator;
+	private DatabaseCreator $databaseCreator;
 
 	public function __construct(DatabaseCreator $databaseCreator)
 	{
 		$this->databaseCreator = $databaseCreator;
 	}
 
-	public function create(Container $testContainer): Configurator
+	public function create(DIContainer $testContainer): Configurator
 	{
 		$testDatabaseName = $this->databaseCreator->getDatabaseName();
 		$testContainerParameters = $testContainer->getParameters();
@@ -41,7 +40,7 @@ class AppConfiguratorFactory implements IAppConfiguratorFactory
 			'services' => [
 				'database.default.connection' => [
 					'setup' => [
-						new Statement('@databaseCreator::createTestDatabase'),
+						new DIStatement('@databaseCreator::createTestDatabase'),
 					],
 				],
 			],

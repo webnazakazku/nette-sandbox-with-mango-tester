@@ -4,12 +4,11 @@ namespace AppTests\Presenters;
 
 use App\Model\UserManager;
 use Mockery\MockInterface;
-use Nette;
+use Nette\Database\Explorer;
 use Webnazakazku\MangoTester\Infrastructure\TestCase;
 use Webnazakazku\MangoTester\PresenterTester\PresenterTester;
 
 $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
-
 
 /**
  * @testCase
@@ -17,8 +16,7 @@ $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
 class SignPresenterTest extends TestCase
 {
 
-	/** @var PresenterTester */
-	private $presenterTester;
+	private PresenterTester $presenterTester;
 
 	public function __construct(PresenterTester $presenterTester)
 	{
@@ -33,11 +31,11 @@ class SignPresenterTest extends TestCase
 		$testResponse = $this->presenterTester->execute($testRequest);
 		$testResponse->assertRenders([
 			'Sign In',
-			'<form class=form-horizontal action="%S%" method="post" id="frm-signInForm">',
+			'<form action="%S%" method="post" id="frm-signInForm" class=form-horizontal>',
 		]);
 	}
 
-	public function testSignInFormSentOk(Nette\Database\Context $ntb): void
+	public function testSignInFormSentOk(Explorer $ntb): void
 	{
 		$ntb->table('users')->insert([
 			'username' => 'dave',
@@ -57,7 +55,7 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertRedirects('Homepage');
 	}
 
-	public function testSignInFormSentWithWrongPassword(Nette\Database\Context $ntb): void
+	public function testSignInFormSentWithWrongPassword(Explorer $ntb): void
 	{
 		$ntb->table('users')->insert([
 			'username' => 'dave',
@@ -99,7 +97,7 @@ class SignPresenterTest extends TestCase
 		$testResponse = $this->presenterTester->execute($testRequest);
 		$testResponse->assertRenders([
 			'Sign Up',
-			'<form class=form-horizontal action="%S%" method="post" id="frm-signUpForm">',
+			'<form action="%S%" method="post" id="frm-signUpForm" class=form-horizontal>',
 		]);
 	}
 
@@ -118,7 +116,7 @@ class SignPresenterTest extends TestCase
 		$testResponse->assertRedirects('Homepage');
 	}
 
-	public function testSignUpFormSentWithDuplicateUsername(Nette\Database\Context $ntb): void
+	public function testSignUpFormSentWithDuplicateUsername(Explorer $ntb): void
 	{
 		$ntb->table('users')->insert([
 			'username' => 'dave',

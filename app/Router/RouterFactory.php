@@ -2,18 +2,19 @@
 
 namespace App\Router;
 
-use Nette;
 use Nette\Application\Routers\RouteList;
+use Nette\StaticClass;
 
 final class RouterFactory
 {
 
-	use Nette\StaticClass;
+	use StaticClass;
 
 	public static function createRouter(): RouteList
 	{
 		$router = new RouteList();
 		$router->addRoute('<presenter>/<action>', 'Homepage:default');
+
 		return $router;
 	}
 

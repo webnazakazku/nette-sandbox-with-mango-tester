@@ -2,39 +2,45 @@
 
 namespace App\Presenters;
 
-use Nette;
-use Nette\Application\Responses;
-use Nette\Http;
+use Nette\Application\BadRequestException;
+use Nette\Application\Helpers;
+use Nette\Application\IPresenter;
+use Nette\Application\Request;
+use Nette\Application\Response;
+use Nette\Application\Responses\CallbackResponse;
+use Nette\Application\Responses\ForwardResponse;
+use Nette\Http\IRequest;
+use Nette\Http\IResponse;
+use Nette\SmartObject;
 use Tracy\ILogger;
 
-final class ErrorPresenter implements Nette\Application\IPresenter
+final class ErrorPresenter implements IPresenter
 {
 
-	use Nette\SmartObject;
+	use SmartObject;
 
-	/** @var ILogger */
-	private $logger;
+	private ILogger $logger;
 
 	public function __construct(ILogger $logger)
 	{
 		$this->logger = $logger;
 	}
 
-	public function run(Nette\Application\Request $request): Nette\Application\Response
+	public function run(Request $request): Response
 	{
 		$e = $request->getParameter('exception');
-		if ($e instanceof Nette\Application\BadRequestException) {
+		if ($e instanceof BadRequestException) {
 			// $this->logger->log("HTTP code {$e->getCode()}: {$e->getMessage()} in {$e->getFile()}:{$e->getLine()}", 'access');
-			[$module, , $sep] = Nette\Application\Helpers::splitName($request->getPresenterName());
+			[$module, , $sep] = Helpers::splitName($request->getPresenterName());
 			$errorPresenter = $module . $sep . 'Error4xx';
 
-			return new Responses\ForwardResponse($request->setPresenterName($errorPresenter));
+			return new ForwardResponse($request->setPresenterName($errorPresenter));
 		}
 
 		$this->logger->log($e, ILogger::EXCEPTION);
 
-		return new Responses\CallbackResponse(
-			static function (Http\IRequest $httpRequest, Http\IResponse $httpResponse): void {
+		return new CallbackResponse(
+			static function (IRequest $httpRequest, IResponse $httpResponse): void {
 				if (preg_match('#^text/html(?:;|$)#', (string) $httpResponse->getHeader('Content-Type')) > 0) {
 					require __DIR__ . '/templates/Error/500.phtml';
 				}

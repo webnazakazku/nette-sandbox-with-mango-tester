@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Nette\Configurator;
+use Nette\Bootstrap\Configurator;
 use Tester\Environment;
 
 class Bootstrap
@@ -29,11 +29,11 @@ class Bootstrap
 		return $configurator;
 	}
 
-
 	public static function bootForTests(): Configurator
 	{
 		$configurator = self::boot();
 		Environment::setup();
+
 		return $configurator;
 	}
 

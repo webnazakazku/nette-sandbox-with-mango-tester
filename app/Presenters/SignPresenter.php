@@ -2,24 +2,24 @@
 
 namespace App\Presenters;
 
-use App\Forms;
+use App\Forms\SignInFormFactory;
+use App\Forms\SignUpFormFactory;
 use Nette\Application\UI\Form;
 
 final class SignPresenter extends BasePresenter
 {
 
-	/** @var string @persistent */
-	public $backlink = '';
+	/** @persistent */
+	public string $backlink = '';
 
-	/** @var Forms\SignInFormFactory */
-	private $signInFactory;
+	private SignInFormFactory $signInFactory;
 
-	/** @var Forms\SignUpFormFactory */
-	private $signUpFactory;
+	private SignUpFormFactory $signUpFactory;
 
-	public function __construct(Forms\SignInFormFactory $signInFactory, Forms\SignUpFormFactory $signUpFactory)
+	public function __construct(SignInFormFactory $signInFactory, SignUpFormFactory $signUpFactory)
 	{
 		parent::__construct();
+
 		$this->signInFactory = $signInFactory;
 		$this->signUpFactory = $signUpFactory;
 	}

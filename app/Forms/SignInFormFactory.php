@@ -2,28 +2,26 @@
 
 namespace App\Forms;
 
-use Nette;
 use Nette\Application\UI\Form;
+use Nette\Security\AuthenticationException;
 use Nette\Security\User;
+use Nette\SmartObject;
 use stdClass;
 
 final class SignInFormFactory
 {
 
-	use Nette\SmartObject;
+	use SmartObject;
 
-	/** @var FormFactory */
-	private $factory;
+	private FormFactory $factory;
 
-	/** @var User */
-	private $user;
+	private User $user;
 
 	public function __construct(FormFactory $factory, User $user)
 	{
 		$this->factory = $factory;
 		$this->user = $user;
 	}
-
 
 	public function create(callable $onSuccess): Form
 	{
@@ -42,8 +40,9 @@ final class SignInFormFactory
 			try {
 				$this->user->setExpiration($values->remember ? '14 days' : '20 minutes');
 				$this->user->login($values->username, $values->password);
-			} catch (Nette\Security\AuthenticationException $e) {
+			} catch (AuthenticationException $e) {
 				$form->addError('The username or password you entered is incorrect.');
+
 				return;
 			}
 

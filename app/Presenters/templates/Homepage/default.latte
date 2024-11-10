@@ -33,7 +33,7 @@
 	<section id="template">
 		<h2>This page template located at <span>{strstr($this->getName(), app)}</span></h2>
 
-		<pre><code class="jush">{file_get_contents($this->getName())|replacere:'#[\w+/]{60,}#','…'}</code></pre>
+		<pre><code class="jush">{file_get_contents($this->getName())|replaceRe:'#[\w+/]{60,}#','…'}</code></pre>
 	</section>
 
 	<section id="layout">

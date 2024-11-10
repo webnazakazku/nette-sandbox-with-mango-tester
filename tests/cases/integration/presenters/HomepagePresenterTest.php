@@ -14,8 +14,7 @@ $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
 class HomepagePresenterTest extends TestCase
 {
 
-	/** @var PresenterTester */
-	private $presenterTester;
+	private PresenterTester $presenterTester;
 
 	public function __construct(PresenterTester $presenterTester)
 	{

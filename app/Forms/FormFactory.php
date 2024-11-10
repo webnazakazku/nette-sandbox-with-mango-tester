@@ -2,13 +2,13 @@
 
 namespace App\Forms;
 
-use Nette;
 use Nette\Application\UI\Form;
+use Nette\SmartObject;
 
 final class FormFactory
 {
 
-	use Nette\SmartObject;
+	use SmartObject;
 
 	public function create(): Form
 	{

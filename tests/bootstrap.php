@@ -4,13 +4,13 @@ require __DIR__ . '/../vendor/autoload.php';
 
 DG\BypassFinals::enable();
 
-$configurator = new Nette\Configurator();
+$configurator = new Nette\Bootstrap\Configurator();
 
-// we need to override defaultExtensions because Nette\Configurator registers
+// we need to override defaultExtensions because Nette\Bootstrap\Configurator registers
 // butch of extensions we don't need and that clash with the Mango Tester
 $configurator->defaultExtensions = [
-	'php' => Nette\DI\Extensions\PhpExtension::class,
-	'constants' => Nette\DI\Extensions\ConstantsExtension::class,
+	'php' => Nette\Bootstrap\Extensions\PhpExtension::class,
+	'constants' => Nette\Bootstrap\Extensions\ConstantsExtension::class,
 	'extensions' => Nette\DI\Extensions\ExtensionsExtension::class,
 	'decorator' => Nette\DI\Extensions\DecoratorExtension::class,
 	'cache' => [Nette\Bridges\CacheDI\CacheExtension::class, ['%tempDir%']],
@@ -28,7 +28,7 @@ $configurator->createRobotLoader()
 	->addDirectory(__DIR__)
 	->register();
 
-$configurator->addParameters([
+$configurator->addStaticParameters([
 	'appDir' => __DIR__ . '/../app',
 	'wwwDir' => __DIR__ . '/../www',
 ]);
