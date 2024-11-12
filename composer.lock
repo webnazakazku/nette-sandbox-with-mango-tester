@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc615ac04e776ba520c49b2fe8948d66",
+    "content-hash": "60028bc045c69ef208e1abd3c9c70f4b",
     "packages": [
         {
             "name": "contributte/console",
@@ -784,21 +784,21 @@
         },
         {
             "name": "nette/http",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/http.git",
-                "reference": "c779293fb79e6d2a16d474cd19dce866615f3b9c"
+                "reference": "5f8f07d4242cb48c6b33d89daa3ea6ddf9668cfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/http/zipball/c779293fb79e6d2a16d474cd19dce866615f3b9c",
-                "reference": "c779293fb79e6d2a16d474cd19dce866615f3b9c",
+                "url": "https://api.github.com/repos/nette/http/zipball/5f8f07d4242cb48c6b33d89daa3ea6ddf9668cfc",
+                "reference": "5f8f07d4242cb48c6b33d89daa3ea6ddf9668cfc",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^4.0.4",
-                "php": "8.1 - 8.3"
+                "php": "8.1 - 8.4"
             },
             "conflict": {
                 "nette/di": "<3.0.3",
@@ -859,9 +859,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/http/issues",
-                "source": "https://github.com/nette/http/tree/v3.3.0"
+                "source": "https://github.com/nette/http/tree/v3.3.1"
             },
-            "time": "2024-01-30T18:16:20+00:00"
+            "time": "2024-11-04T16:30:18+00:00"
         },
         {
             "name": "nette/mail",
@@ -2722,16 +2722,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.12.9",
+            "version": "1.12.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "ceb937fb39a92deabc02d20709cf14b2c452502c"
+                "reference": "fc463b5d0fe906dcf19689be692c65c50406a071"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/ceb937fb39a92deabc02d20709cf14b2c452502c",
-                "reference": "ceb937fb39a92deabc02d20709cf14b2c452502c",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/fc463b5d0fe906dcf19689be692c65c50406a071",
+                "reference": "fc463b5d0fe906dcf19689be692c65c50406a071",
                 "shasum": ""
             },
             "require": {
@@ -2776,7 +2776,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-10T17:10:04+00:00"
+            "time": "2024-11-11T15:37:09+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -3124,16 +3124,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.10.3",
+            "version": "3.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "62d32998e820bddc40f99f8251958aed187a5c9c"
+                "reference": "70c08f8d20c0eb4fe56f26644dd94dae76a7f450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/62d32998e820bddc40f99f8251958aed187a5c9c",
-                "reference": "62d32998e820bddc40f99f8251958aed187a5c9c",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/70c08f8d20c0eb4fe56f26644dd94dae76a7f450",
+                "reference": "70c08f8d20c0eb4fe56f26644dd94dae76a7f450",
                 "shasum": ""
             },
             "require": {
@@ -3200,34 +3200,36 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-09-18T10:38:58+00:00"
+            "time": "2024-11-12T09:53:29+00:00"
         },
         {
             "name": "webnazakazku/mango-presenter-tester",
-            "version": "v0.4",
+            "version": "v0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webnazakazku/mango-presenter-tester.git",
-                "reference": "cc0785c1edb803168466b3111ef72cb0aca1a92c"
+                "reference": "18e916718aa4283b67b10e707e4332e7c406bb1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webnazakazku/mango-presenter-tester/zipball/cc0785c1edb803168466b3111ef72cb0aca1a92c",
-                "reference": "cc0785c1edb803168466b3111ef72cb0aca1a92c",
+                "url": "https://api.github.com/repos/webnazakazku/mango-presenter-tester/zipball/18e916718aa4283b67b10e707e4332e7c406bb1c",
+                "reference": "18e916718aa4283b67b10e707e4332e7c406bb1c",
                 "shasum": ""
             },
             "require": {
-                "nette/application": "~3.0",
-                "nette/forms": "~3.0",
-                "nette/security": "~3.0",
+                "nette/application": "^3.2",
+                "nette/forms": "^3.2",
+                "nette/http": "^3.3.1",
+                "nette/security": "^3.2",
                 "nette/tester": "~2.0",
                 "php": ">=7.2"
             },
             "require-dev": {
-                "latte/latte": "^2.4",
-                "nette/bootstrap": "~3.0.0",
+                "contributte/qa": "^0.3",
+                "dg/bypass-finals": "^1.8",
+                "latte/latte": "^3.0",
+                "nette/bootstrap": "~3.2.0",
                 "nextras/secured-links": "@dev",
-                "ninjify/qa": "^0.13",
                 "phpstan/phpstan": "^1.0",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
                 "phpstan/phpstan-nette": "^1.0",
@@ -3245,7 +3247,7 @@
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/webnazakazku/mango-presenter-tester/tree/v0.4"
+                "source": "https://github.com/webnazakazku/mango-presenter-tester/tree/v0.5"
             },
             "funding": [
                 {
@@ -3253,7 +3255,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-25T21:31:18+00:00"
+            "time": "2024-11-11T22:15:17+00:00"
         },
         {
             "name": "webnazakazku/mango-tester-database-creator",
@@ -3309,16 +3311,16 @@
         },
         {
             "name": "webnazakazku/mango-tester-http-mocks",
-            "version": "dev-master",
+            "version": "v0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webnazakazku/mango-tester-http-mocks.git",
-                "reference": "4a026e274511ac72dc4b5ef323887de615ff041b"
+                "reference": "aa5c7cd3e3bdf67d3d94597f3133eb3a2d25e065"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webnazakazku/mango-tester-http-mocks/zipball/4a026e274511ac72dc4b5ef323887de615ff041b",
-                "reference": "4a026e274511ac72dc4b5ef323887de615ff041b",
+                "url": "https://api.github.com/repos/webnazakazku/mango-tester-http-mocks/zipball/aa5c7cd3e3bdf67d3d94597f3133eb3a2d25e065",
+                "reference": "aa5c7cd3e3bdf67d3d94597f3133eb3a2d25e065",
                 "shasum": ""
             },
             "require": {
@@ -3330,7 +3332,6 @@
                 "phpstan/phpstan": "^1.0",
                 "webnazakazku/mango-tester-infrastructure": "^0.6"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -3342,7 +3343,7 @@
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/webnazakazku/mango-tester-http-mocks/tree/master"
+                "source": "https://github.com/webnazakazku/mango-tester-http-mocks/tree/v0.5"
             },
             "funding": [
                 {
@@ -3350,7 +3351,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-10T16:50:18+00:00"
+            "time": "2024-11-11T21:32:23+00:00"
         },
         {
             "name": "webnazakazku/mango-tester-infrastructure",
@@ -3403,9 +3404,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "webnazakazku/mango-tester-http-mocks": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
