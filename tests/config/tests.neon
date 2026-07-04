@@ -18,7 +18,6 @@ parameters:
 		databaseConnectionServiceName: database.default.connection
 
 
-
 migrations:
 	dir: %appDir%/../migrations # migrations base directory
 	driver: mysql               # pgsql or mysql

@@ -53,14 +53,14 @@ services:
       MYSQL_ROOT_PASSWORD: root
 
   console:
-    image: webnazakazku/docker-php-build:8.1
+    image: webnazakazku/docker-php-build:8.3
     entrypoint: bash
     working_dir: /var/www/html
     volumes:
       - ./:/var/www/html
       - ./.docker/cache:/cache
-      - ./.docker/php/xdebug.ini:/etc/php/8.1/mods-available/xdebug.ini
-      - ./.docker/php/custom.ini:/etc/php/8.1/cli/conf.d/custom.ini
+      - ./.docker/php/xdebug.ini:/etc/php/8.3/mods-available/xdebug.ini
+      - ./.docker/php/custom.ini:/etc/php/8.3/cli/conf.d/custom.ini
       - ./.docker/console/root:/root
     environment:
       PHP_IDE_CONFIG: serverName=localhost

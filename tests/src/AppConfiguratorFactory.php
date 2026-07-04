@@ -30,6 +30,7 @@ class AppConfiguratorFactory implements IAppConfiguratorFactory
 
 		$configurator->addConfig($testContainerParameters['appDir'] . '/config/common.neon');
 		$configurator->addConfig($testContainerParameters['appDir'] . '/config/local.neon');
+		$configurator->addConfig(__DIR__ . '/../config/app.neon');
 		$testDatabaseHost = $testContainerParameters['dbHost'] . ':' . $testContainerParameters['dbPort'];
 		$configurator->addConfig([
 			'console' => [
@@ -39,6 +40,12 @@ class AppConfiguratorFactory implements IAppConfiguratorFactory
 				'dsn' => sprintf('mysql:host=%s;dbname=%s', $testDatabaseHost, $testDatabaseName),
 			],
 		]);
+
+		$configurator->addStaticParameters(
+			[
+				'appDir' => __DIR__ . '/../../app',
+			]
+		);
 
 		return $configurator;
 	}

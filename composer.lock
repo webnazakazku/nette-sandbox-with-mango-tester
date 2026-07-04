@@ -4,39 +4,39 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb35c1a0c606e67b49dd4b02cb0dc724",
+    "content-hash": "75e69096d78dcbf1140b7e20a2c59463",
     "packages": [
         {
             "name": "contributte/console",
-            "version": "v0.10.1",
+            "version": "v0.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/console.git",
-                "reference": "dc2b84fb8dd795ea9988f396311aeed435aed495"
+                "reference": "70dd8a6661756158473b4fafc16ddb7130079dbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/console/zipball/dc2b84fb8dd795ea9988f396311aeed435aed495",
-                "reference": "dc2b84fb8dd795ea9988f396311aeed435aed495",
+                "url": "https://api.github.com/repos/contributte/console/zipball/70dd8a6661756158473b4fafc16ddb7130079dbe",
+                "reference": "70dd8a6661756158473b4fafc16ddb7130079dbe",
                 "shasum": ""
             },
             "require": {
                 "nette/di": "^3.1.8",
-                "php": ">=8.1",
-                "symfony/console": "^6.4.2 || ^7.0.2"
+                "php": ">=8.2",
+                "symfony/console": "^7.2.0 || ^8.0.0"
             },
             "require-dev": {
-                "contributte/phpstan": "^0.1",
-                "contributte/qa": "^0.4",
-                "contributte/tester": "^0.4",
-                "mockery/mockery": "^1.6.7",
+                "contributte/phpstan": "^0.2.0",
+                "contributte/qa": "^0.4.0",
+                "contributte/tester": "^0.4.0",
+                "mockery/mockery": "^1.6.12",
                 "nette/http": "^3.2.3",
-                "symfony/event-dispatcher": "^6.4.2 || ^7.0.2"
+                "symfony/event-dispatcher": "^7.2.0 || ^8.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.11.x-dev"
+                    "dev-master": "0.12.x-dev"
                 }
             },
             "autoload": {
@@ -63,7 +63,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/console/issues",
-                "source": "https://github.com/contributte/console/tree/v0.10.1"
+                "source": "https://github.com/contributte/console/tree/v0.11.0"
             },
             "funding": [
                 {
@@ -75,7 +75,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-04T20:10:58+00:00"
+            "time": "2026-01-07T08:24:33+00:00"
         },
         {
             "name": "cweagans/composer-configurable-plugin",
@@ -202,22 +202,22 @@
         },
         {
             "name": "latte/latte",
-            "version": "v3.0.26",
+            "version": "v3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/latte.git",
-                "reference": "b5bd179e2e939c9673c9c0b99cb8b0eca6b2f8b3"
+                "reference": "14dea9fc32c0d1cf5e9a1bd59556ae8be023c2a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/latte/zipball/b5bd179e2e939c9673c9c0b99cb8b0eca6b2f8b3",
-                "reference": "b5bd179e2e939c9673c9c0b99cb8b0eca6b2f8b3",
+                "url": "https://api.github.com/repos/nette/latte/zipball/14dea9fc32c0d1cf5e9a1bd59556ae8be023c2a6",
+                "reference": "14dea9fc32c0d1cf5e9a1bd59556ae8be023c2a6",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-tokenizer": "*",
-                "php": "8.0 - 8.5"
+                "php": "8.2 - 8.5"
             },
             "conflict": {
                 "nette/application": "<3.1.7",
@@ -225,9 +225,11 @@
             },
             "require-dev": {
                 "nette/php-generator": "^4.0",
-                "nette/tester": "^2.5",
+                "nette/phpstan-rules": "^1.0",
+                "nette/tester": "^2.6",
                 "nette/utils": "^4.0",
-                "phpstan/phpstan-nette": "^2.0@stable",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable",
                 "tracy/tracy": "^2.10"
             },
             "suggest": {
@@ -244,7 +246,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -285,43 +287,44 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/latte/issues",
-                "source": "https://github.com/nette/latte/tree/v3.0.26"
+                "source": "https://github.com/nette/latte/tree/v3.1.4"
             },
-            "time": "2026-02-24T23:59:23+00:00"
+            "time": "2026-04-23T06:30:25+00:00"
         },
         {
             "name": "nette/application",
-            "version": "v3.2.10",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/application.git",
-                "reference": "cdf59b0a1e3aaf8afb490070539c2b1974655bf6"
+                "reference": "104484c317fdb1b29baf77617ca040b97685e9bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/application/zipball/cdf59b0a1e3aaf8afb490070539c2b1974655bf6",
-                "reference": "cdf59b0a1e3aaf8afb490070539c2b1974655bf6",
+                "url": "https://api.github.com/repos/nette/application/zipball/104484c317fdb1b29baf77617ca040b97685e9bb",
+                "reference": "104484c317fdb1b29baf77617ca040b97685e9bb",
                 "shasum": ""
             },
             "require": {
-                "nette/component-model": "^3.1",
-                "nette/http": "^3.3.2",
+                "nette/component-model": "^3.2 || ^4.0",
+                "nette/http": "^3.4",
                 "nette/routing": "^3.1.1",
-                "nette/utils": "^4.0",
-                "php": "8.1 - 8.5"
+                "nette/utils": "^4.1",
+                "php": "8.3 - 8.5"
             },
             "conflict": {
-                "latte/latte": "<2.7.1 || >=3.0.0 <3.0.18 || >=3.2",
+                "latte/latte": "<3.1.4 || >=3.2",
                 "nette/caching": "<3.2",
                 "nette/di": "<3.2",
                 "nette/forms": "<3.2",
                 "nette/schema": "<1.3",
-                "tracy/tracy": "<2.9"
+                "tracy/tracy": "<2.12"
             },
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "^1.2",
-                "latte/latte": "^2.10.2 || ^3.0.18",
+                "latte/latte": "^3.1.4",
                 "mockery/mockery": "^1.6@stable",
+                "nette/caching": "^3.2",
                 "nette/di": "^3.2",
                 "nette/forms": "^3.2",
                 "nette/phpstan-rules": "^1.0",
@@ -329,8 +332,8 @@
                 "nette/security": "^3.2",
                 "nette/tester": "^2.6",
                 "phpstan/extension-installer": "^1.4@stable",
-                "phpstan/phpstan": "^2.1@stable",
-                "tracy/tracy": "^2.9"
+                "phpstan/phpstan": "^2.2@stable",
+                "tracy/tracy": "^2.12"
             },
             "suggest": {
                 "latte/latte": "Allows using Latte in templates",
@@ -339,7 +342,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -382,46 +385,52 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/application/issues",
-                "source": "https://github.com/nette/application/tree/v3.2.10"
+                "source": "https://github.com/nette/application/tree/v3.3.0"
             },
-            "time": "2026-06-01T19:39:23+00:00"
+            "time": "2026-06-29T19:05:48+00:00"
         },
         {
             "name": "nette/bootstrap",
-            "version": "v3.2.8",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/bootstrap.git",
-                "reference": "8350eaf5667549244c302411d95c2841af3b1c52"
+                "reference": "3c8cbf8383b6df153bfb848a3c311ce42261a336"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/bootstrap/zipball/8350eaf5667549244c302411d95c2841af3b1c52",
-                "reference": "8350eaf5667549244c302411d95c2841af3b1c52",
+                "url": "https://api.github.com/repos/nette/bootstrap/zipball/3c8cbf8383b6df153bfb848a3c311ce42261a336",
+                "reference": "3c8cbf8383b6df153bfb848a3c311ce42261a336",
                 "shasum": ""
             },
             "require": {
-                "nette/di": "^3.1",
-                "nette/utils": "^3.2.1 || ^4.0",
-                "php": "8.0 - 8.5"
+                "nette/di": "^3.2",
+                "nette/utils": "^4.1",
+                "php": "8.3 - 8.5"
             },
             "conflict": {
+                "nette/caching": "<3.3",
+                "nette/mail": "<4.1.2",
                 "tracy/tracy": "<2.6"
             },
             "require-dev": {
-                "latte/latte": "^2.8 || ^3.0",
-                "nette/application": "^3.1",
-                "nette/caching": "^3.0",
-                "nette/database": "^3.0",
-                "nette/forms": "^3.0",
-                "nette/http": "^3.0",
-                "nette/mail": "^3.0 || ^4.0",
-                "nette/robot-loader": "^3.0 || ^4.0",
+                "latte/latte": "^3.0",
+                "nette/application": "^3.2",
+                "nette/assets": "^1.0",
+                "nette/caching": "^3.3",
+                "nette/database": "^3.2",
+                "nette/forms": "^3.2",
+                "nette/http": "^3.2",
+                "nette/mail": "^4.1",
+                "nette/neon": "^3.4",
+                "nette/phpstan-rules": "^1.0",
+                "nette/robot-loader": "^4.0",
                 "nette/safe-stream": "^2.2",
-                "nette/security": "^3.0",
+                "nette/security": "^3.2",
                 "nette/tester": "^2.6",
-                "phpstan/phpstan-nette": "^2.0@stable",
-                "tracy/tracy": "^2.9"
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.2@stable",
+                "tracy/tracy": "^2.12"
             },
             "suggest": {
                 "nette/robot-loader": "to use Configurator::createRobotLoader()",
@@ -430,7 +439,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -466,9 +475,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/bootstrap/issues",
-                "source": "https://github.com/nette/bootstrap/tree/v3.2.8"
+                "source": "https://github.com/nette/bootstrap/tree/v3.3.0"
             },
-            "time": "2026-05-05T22:55:20+00:00"
+            "time": "2026-06-21T22:20:56+00:00"
         },
         {
             "name": "nette/caching",
@@ -551,33 +560,33 @@
         },
         {
             "name": "nette/component-model",
-            "version": "v3.2.0",
+            "version": "v4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/component-model.git",
-                "reference": "23ad9cf94f004348e1bd02af3ecffa8d9cd2bf84"
+                "reference": "b4e82e1a3a7ca6f66ce766704aa2e148de277276"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/component-model/zipball/23ad9cf94f004348e1bd02af3ecffa8d9cd2bf84",
-                "reference": "23ad9cf94f004348e1bd02af3ecffa8d9cd2bf84",
+                "url": "https://api.github.com/repos/nette/component-model/zipball/b4e82e1a3a7ca6f66ce766704aa2e148de277276",
+                "reference": "b4e82e1a3a7ca6f66ce766704aa2e148de277276",
                 "shasum": ""
             },
             "require": {
-                "nette/utils": "^4.0",
-                "php": "8.1 - 8.5"
+                "nette/utils": "^4.1",
+                "php": "8.3 - 8.5"
             },
             "require-dev": {
                 "nette/phpstan-rules": "^1.0",
                 "nette/tester": "^2.6",
                 "phpstan/extension-installer": "^1.4@stable",
                 "phpstan/phpstan": "^2.1@stable",
-                "tracy/tracy": "^2.9"
+                "tracy/tracy": "^2.12"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -612,9 +621,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/component-model/issues",
-                "source": "https://github.com/nette/component-model/tree/v3.2.0"
+                "source": "https://github.com/nette/component-model/tree/v4.0.1"
             },
-            "time": "2026-05-26T10:35:41+00:00"
+            "time": "2026-06-21T23:31:36+00:00"
         },
         {
             "name": "nette/database",
@@ -776,36 +785,36 @@
         },
         {
             "name": "nette/forms",
-            "version": "v3.2.9",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/forms.git",
-                "reference": "b749e9c2cd259a8ac75d444137f1caf94ec644ef"
+                "reference": "90aac9e6a55a71a76aaead65bca1129acb41ec84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/forms/zipball/b749e9c2cd259a8ac75d444137f1caf94ec644ef",
-                "reference": "b749e9c2cd259a8ac75d444137f1caf94ec644ef",
+                "url": "https://api.github.com/repos/nette/forms/zipball/90aac9e6a55a71a76aaead65bca1129acb41ec84",
+                "reference": "90aac9e6a55a71a76aaead65bca1129acb41ec84",
                 "shasum": ""
             },
             "require": {
-                "nette/component-model": "^3.1",
-                "nette/http": "^3.3",
-                "nette/utils": "^4.0.4",
-                "php": "8.1 - 8.5"
+                "nette/component-model": "^3.2 || ^4.0",
+                "nette/http": "^3.4",
+                "nette/utils": "^4.1",
+                "php": "8.3 - 8.5"
             },
             "conflict": {
-                "latte/latte": ">=3.0.0 <3.0.12 || >=3.2"
+                "latte/latte": "<3.1.4 || >=3.2"
             },
             "require-dev": {
-                "latte/latte": "^2.10.2 || ^3.0.12",
-                "nette/application": "^3.0",
-                "nette/di": "^3.0",
+                "latte/latte": "^3.1.4",
+                "nette/application": "^3.2",
+                "nette/di": "^3.2",
                 "nette/phpstan-rules": "^1.0",
                 "nette/tester": "^2.6",
                 "phpstan/extension-installer": "^1.4@stable",
                 "phpstan/phpstan": "^2.1@stable",
-                "tracy/tracy": "^2.9"
+                "tracy/tracy": "^2.12"
             },
             "suggest": {
                 "ext-intl": "to use date/time controls"
@@ -813,7 +822,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -852,40 +861,40 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/forms/issues",
-                "source": "https://github.com/nette/forms/tree/v3.2.9"
+                "source": "https://github.com/nette/forms/tree/v3.3.0"
             },
-            "time": "2026-05-26T15:09:08+00:00"
+            "time": "2026-06-28T12:32:44+00:00"
         },
         {
             "name": "nette/http",
-            "version": "v3.3.4",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/http.git",
-                "reference": "d92cb97fea369d10b46677223cc2bfb5adc1a2f2"
+                "reference": "de5988d8802e76d9bda85fe5a871d29c794684f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/http/zipball/d92cb97fea369d10b46677223cc2bfb5adc1a2f2",
-                "reference": "d92cb97fea369d10b46677223cc2bfb5adc1a2f2",
+                "url": "https://api.github.com/repos/nette/http/zipball/de5988d8802e76d9bda85fe5a871d29c794684f4",
+                "reference": "de5988d8802e76d9bda85fe5a871d29c794684f4",
                 "shasum": ""
             },
             "require": {
-                "nette/utils": "^4.0.4",
-                "php": "8.1 - 8.5"
+                "nette/utils": "^4.1",
+                "php": "8.3 - 8.5"
             },
             "conflict": {
                 "nette/di": "<3.0.3",
                 "nette/schema": "<1.2"
             },
             "require-dev": {
-                "nette/di": "^3.0",
+                "nette/di": "^3.2",
                 "nette/phpstan-rules": "^1.0",
-                "nette/security": "^3.0",
+                "nette/security": "^3.2",
                 "nette/tester": "^2.6",
                 "phpstan/extension-installer": "^1.4@stable",
-                "phpstan/phpstan": "^2.1@stable",
-                "tracy/tracy": "^2.8"
+                "phpstan/phpstan": "^2.2@stable",
+                "tracy/tracy": "^2.12"
             },
             "suggest": {
                 "ext-fileinfo": "to detect MIME type of uploaded files by Nette\\Http\\FileUpload",
@@ -896,7 +905,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -938,43 +947,46 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/http/issues",
-                "source": "https://github.com/nette/http/tree/v3.3.4"
+                "source": "https://github.com/nette/http/tree/v3.4.0"
             },
-            "time": "2026-05-26T16:57:36+00:00"
+            "time": "2026-06-13T01:04:19+00:00"
         },
         {
             "name": "nette/mail",
-            "version": "v4.0.4",
+            "version": "v4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/mail.git",
-                "reference": "5f16f76ed14a32f34580811d1a07ac357352bbc4"
+                "reference": "c4ffac25187b1212fb9014341ecf96ed2fd8c4fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/mail/zipball/5f16f76ed14a32f34580811d1a07ac357352bbc4",
-                "reference": "5f16f76ed14a32f34580811d1a07ac357352bbc4",
+                "url": "https://api.github.com/repos/nette/mail/zipball/c4ffac25187b1212fb9014341ecf96ed2fd8c4fc",
+                "reference": "c4ffac25187b1212fb9014341ecf96ed2fd8c4fc",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
-                "nette/utils": "^4.0",
-                "php": "8.0 - 8.5"
+                "nette/utils": "^4.1",
+                "php": "8.2 - 8.5"
             },
             "require-dev": {
                 "nette/di": "^3.1 || ^4.0",
-                "nette/tester": "^2.4",
-                "phpstan/phpstan-nette": "^2.0@stable",
-                "tracy/tracy": "^2.8"
+                "nette/phpstan-rules": "^1.0",
+                "nette/tester": "^2.6",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1.40@stable",
+                "tracy/tracy": "^2.11"
             },
             "suggest": {
+                "ext-dom": "to use Nette\\Mail\\CssInliner",
                 "ext-fileinfo": "to detect type of attached files",
                 "ext-openssl": "to use Nette\\Mail\\DkimSigner"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1012,9 +1024,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/mail/issues",
-                "source": "https://github.com/nette/mail/tree/v4.0.4"
+                "source": "https://github.com/nette/mail/tree/v4.1.2"
             },
-            "time": "2025-08-01T02:09:42+00:00"
+            "time": "2026-05-19T18:23:42+00:00"
         },
         {
             "name": "nette/neon",
@@ -1368,16 +1380,16 @@
         },
         {
             "name": "nette/security",
-            "version": "v3.2.4",
+            "version": "v3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/security.git",
-                "reference": "9af540e72fe3452145f5190016d40b902ff9e0e8"
+                "reference": "50ce3c4b8edd27cb134237cac3af514a84331524"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/security/zipball/9af540e72fe3452145f5190016d40b902ff9e0e8",
-                "reference": "9af540e72fe3452145f5190016d40b902ff9e0e8",
+                "url": "https://api.github.com/repos/nette/security/zipball/50ce3c4b8edd27cb134237cac3af514a84331524",
+                "reference": "50ce3c4b8edd27cb134237cac3af514a84331524",
                 "shasum": ""
             },
             "require": {
@@ -1438,26 +1450,26 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/security/issues",
-                "source": "https://github.com/nette/security/tree/v3.2.4"
+                "source": "https://github.com/nette/security/tree/v3.2.5"
             },
-            "time": "2026-05-23T02:39:03+00:00"
+            "time": "2026-06-15T05:40:46+00:00"
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.10",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "2778deb6aab136c8db4ed1f4d6e9f465ca2dbee3"
+                "reference": "7da6c396d7ebe142bc857c20479d5e70a5e1aac7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/2778deb6aab136c8db4ed1f4d6e9f465ca2dbee3",
-                "reference": "2778deb6aab136c8db4ed1f4d6e9f465ca2dbee3",
+                "url": "https://api.github.com/repos/nette/utils/zipball/7da6c396d7ebe142bc857c20479d5e70a5e1aac7",
+                "reference": "7da6c396d7ebe142bc857c20479d5e70a5e1aac7",
                 "shasum": ""
             },
             "require": {
-                "php": "8.0 - 8.5"
+                "php": "8.2 - 8.5"
             },
             "conflict": {
                 "nette/finder": "<3",
@@ -1465,8 +1477,10 @@
             },
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "^1.2",
+                "nette/phpstan-rules": "^1.0",
                 "nette/tester": "^2.5",
-                "phpstan/phpstan-nette": "^2.0@stable",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
@@ -1480,7 +1494,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1527,9 +1541,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.10"
+                "source": "https://github.com/nette/utils/tree/v4.1.4"
             },
-            "time": "2025-12-01T17:30:42+00:00"
+            "time": "2026-05-11T20:49:54+00:00"
         },
         {
             "name": "nextras/migrations",
@@ -1655,47 +1669,47 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.4.41",
+            "version": "v7.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d21b17ed158e79180fac3895ff751707970eeb57"
+                "reference": "92f58bc4bf97a92ed1b9f367f0cd44f20bde0e87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d21b17ed158e79180fac3895ff751707970eeb57",
-                "reference": "d21b17ed158e79180fac3895ff751707970eeb57",
+                "url": "https://api.github.com/repos/symfony/console/zipball/92f58bc4bf97a92ed1b9f367f0cd44f20bde0e87",
+                "reference": "92f58bc4bf97a92ed1b9f367f0cd44f20bde0e87",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/service-contracts": "^2.5|^3",
-                "symfony/string": "^5.4|^6.0|^7.0"
+                "symfony/string": "^7.2|^8.0"
             },
             "conflict": {
-                "symfony/dependency-injection": "<5.4",
-                "symfony/dotenv": "<5.4",
-                "symfony/event-dispatcher": "<5.4",
-                "symfony/lock": "<5.4",
-                "symfony/process": "<5.4"
+                "symfony/dependency-injection": "<6.4",
+                "symfony/dotenv": "<6.4",
+                "symfony/event-dispatcher": "<6.4",
+                "symfony/lock": "<6.4",
+                "symfony/process": "<6.4"
             },
             "provide": {
                 "psr/log-implementation": "1.0|2.0|3.0"
             },
             "require-dev": {
                 "psr/log": "^1|^2|^3",
-                "symfony/config": "^5.4|^6.0|^7.0",
-                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
-                "symfony/event-dispatcher": "^5.4|^6.0|^7.0",
-                "symfony/http-foundation": "^6.4|^7.0",
-                "symfony/http-kernel": "^6.4|^7.0",
-                "symfony/lock": "^5.4|^6.0|^7.0",
-                "symfony/messenger": "^5.4|^6.0|^7.0",
-                "symfony/process": "^5.4|^6.0|^7.0",
-                "symfony/stopwatch": "^5.4|^6.0|^7.0",
-                "symfony/var-dumper": "^5.4|^6.0|^7.0"
+                "symfony/config": "^6.4|^7.0|^8.0",
+                "symfony/dependency-injection": "^6.4|^7.0|^8.0",
+                "symfony/event-dispatcher": "^6.4|^7.0|^8.0",
+                "symfony/http-foundation": "^6.4|^7.0|^8.0",
+                "symfony/http-kernel": "^6.4|^7.0|^8.0",
+                "symfony/lock": "^6.4|^7.0|^8.0",
+                "symfony/messenger": "^6.4|^7.0|^8.0",
+                "symfony/process": "^6.4|^7.0|^8.0",
+                "symfony/stopwatch": "^6.4|^7.0|^8.0",
+                "symfony/var-dumper": "^6.4|^7.0|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -1729,7 +1743,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v6.4.41"
+                "source": "https://github.com/symfony/console/tree/v7.4.14"
             },
             "funding": [
                 {
@@ -1749,20 +1763,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-24T08:48:41+00:00"
+            "time": "2026-06-16T11:50:14+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.7.0",
+            "version": "v3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b"
+                "reference": "f3202fa1b5097b0af062dc978b32ecf63404e31d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/50f59d1f3ca46d41ac911f97a78626b6756af35b",
-                "reference": "50f59d1f3ca46d41ac911f97a78626b6756af35b",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/f3202fa1b5097b0af062dc978b32ecf63404e31d",
+                "reference": "f3202fa1b5097b0af062dc978b32ecf63404e31d",
                 "shasum": ""
             },
             "require": {
@@ -1800,7 +1814,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.7.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.7.1"
             },
             "funding": [
                 {
@@ -1820,7 +1834,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-04-13T15:52:40+00:00"
+            "time": "2026-06-05T06:23:12+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2159,16 +2173,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.7.0",
+            "version": "v3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "d25d82433a80eba6aa0e6c24b61d7370d99e444a"
+                "reference": "c0a284bab1ed8aa0417e3d69250ab437739563a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/d25d82433a80eba6aa0e6c24b61d7370d99e444a",
-                "reference": "d25d82433a80eba6aa0e6c24b61d7370d99e444a",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/c0a284bab1ed8aa0417e3d69250ab437739563a0",
+                "reference": "c0a284bab1ed8aa0417e3d69250ab437739563a0",
                 "shasum": ""
             },
             "require": {
@@ -2222,7 +2236,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.7.0"
+                "source": "https://github.com/symfony/service-contracts/tree/v3.7.1"
             },
             "funding": [
                 {
@@ -2242,26 +2256,27 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-03-28T09:44:51+00:00"
+            "time": "2026-06-16T09:55:08+00:00"
         },
         {
             "name": "symfony/string",
-            "version": "v6.4.39",
+            "version": "v7.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "62e3c927de664edadb5bef260987eb047a17a113"
+                "reference": "961683010db3b27ec6ebcd7308e6e1ee8fa7ffde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/62e3c927de664edadb5bef260987eb047a17a113",
-                "reference": "62e3c927de664edadb5bef260987eb047a17a113",
+                "url": "https://api.github.com/repos/symfony/string/zipball/961683010db3b27ec6ebcd7308e6e1ee8fa7ffde",
+                "reference": "961683010db3b27ec6ebcd7308e6e1ee8fa7ffde",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3.0",
                 "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-intl-grapheme": "~1.0",
+                "symfony/polyfill-intl-grapheme": "~1.33",
                 "symfony/polyfill-intl-normalizer": "~1.0",
                 "symfony/polyfill-mbstring": "~1.0"
             },
@@ -2269,10 +2284,11 @@
                 "symfony/translation-contracts": "<2.5"
             },
             "require-dev": {
-                "symfony/http-client": "^5.4|^6.0|^7.0",
-                "symfony/intl": "^6.2|^7.0",
+                "symfony/emoji": "^7.1|^8.0",
+                "symfony/http-client": "^6.4|^7.0|^8.0",
+                "symfony/intl": "^6.4|^7.0|^8.0",
                 "symfony/translation-contracts": "^2.5|^3.0",
-                "symfony/var-exporter": "^5.4|^6.0|^7.0"
+                "symfony/var-exporter": "^6.4|^7.0|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -2311,7 +2327,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.4.39"
+                "source": "https://github.com/symfony/string/tree/v7.4.13"
             },
             "funding": [
                 {
@@ -2331,26 +2347,26 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-12T11:44:19+00:00"
+            "time": "2026-05-23T15:23:29+00:00"
         },
         {
             "name": "tracy/tracy",
-            "version": "v2.10.10",
+            "version": "v2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "32303e02c222eea8571402a8310fc3fe70422c37"
+                "reference": "535eda4871fd04f2756c8d95f6bdfa43706d79be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/32303e02c222eea8571402a8310fc3fe70422c37",
-                "reference": "32303e02c222eea8571402a8310fc3fe70422c37",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/535eda4871fd04f2756c8d95f6bdfa43706d79be",
+                "reference": "535eda4871fd04f2756c8d95f6bdfa43706d79be",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-session": "*",
-                "php": "8.0 - 8.4"
+                "php": "8.2 - 8.5"
             },
             "conflict": {
                 "nette/di": "<3.0"
@@ -2360,21 +2376,26 @@
                 "nette/di": "^3.0",
                 "nette/http": "^3.0",
                 "nette/mail": "^3.0 || ^4.0",
-                "nette/tester": "^2.2",
+                "nette/phpstan-rules": "^1.0",
+                "nette/tester": "^2.6",
                 "nette/utils": "^3.0 || ^4.0",
-                "phpstan/phpstan": "^1.0",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable",
                 "psr/log": "^1.0 || ^2.0 || ^3.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.10-dev"
+                    "dev-master": "2.12-dev"
                 }
             },
             "autoload": {
                 "files": [
                     "src/Tracy/functions.php"
                 ],
+                "psr-4": {
+                    "Tracy\\": "src"
+                },
                 "classmap": [
                     "src"
                 ]
@@ -2404,43 +2425,47 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/tracy/issues",
-                "source": "https://github.com/nette/tracy/tree/v2.10.10"
+                "source": "https://github.com/nette/tracy/tree/v2.12.0"
             },
-            "time": "2025-04-28T14:35:15+00:00"
+            "time": "2026-05-04T00:23:53+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "contributte/qa",
-            "version": "v0.3.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contributte/qa.git",
-                "reference": "10e6b8c5eef97588f480bd7874d50a3bdb031933"
+                "reference": "164bd71d2fa31526df821eab506efe952cc5858e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contributte/qa/zipball/10e6b8c5eef97588f480bd7874d50a3bdb031933",
-                "reference": "10e6b8c5eef97588f480bd7874d50a3bdb031933",
+                "url": "https://api.github.com/repos/contributte/qa/zipball/164bd71d2fa31526df821eab506efe952cc5858e",
+                "reference": "164bd71d2fa31526df821eab506efe952cc5858e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.0",
-                "slevomat/coding-standard": "^8.12.1",
-                "squizlabs/php_codesniffer": "^3.7.2"
+                "php": ">=8.2",
+                "slevomat/coding-standard": "^8.25.1",
+                "squizlabs/php_codesniffer": "^4.0.1"
             },
             "require-dev": {
-                "contributte/tester": "^0.2.0",
+                "brianium/paratest": "^7.0",
+                "contributte/phpunit": "^0.2.0",
+                "nette/robot-loader": "^4.1.0",
+                "nette/utils": "^4.0",
                 "symfony/process": "^6.0.0"
             },
+            "default-branch": true,
             "bin": [
                 "bin/codesniffer",
                 "bin/codefixer"
             ],
-            "type": "library",
+            "type": "phpcodesniffer-standard",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4.x-dev"
+                    "dev-master": "0.5.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2464,7 +2489,7 @@
             ],
             "support": {
                 "issues": "https://github.com/contributte/qa/issues",
-                "source": "https://github.com/contributte/qa/tree/v0.3.2"
+                "source": "https://github.com/contributte/qa/tree/master"
             },
             "funding": [
                 {
@@ -2476,7 +2501,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-06T16:11:13+00:00"
+            "time": "2026-03-17T17:10:55+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -2576,16 +2601,16 @@
         },
         {
             "name": "dg/bypass-finals",
-            "version": "v1.10.1",
+            "version": "v1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dg/bypass-finals.git",
-                "reference": "62d4ea18f8937af7d794b3358c125ecb52862e98"
+                "reference": "da72f7848e43f348f743cb37ee2d44419e58db92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dg/bypass-finals/zipball/62d4ea18f8937af7d794b3358c125ecb52862e98",
-                "reference": "62d4ea18f8937af7d794b3358c125ecb52862e98",
+                "url": "https://api.github.com/repos/dg/bypass-finals/zipball/da72f7848e43f348f743cb37ee2d44419e58db92",
+                "reference": "da72f7848e43f348f743cb37ee2d44419e58db92",
                 "shasum": ""
             },
             "require": {
@@ -2623,9 +2648,9 @@
             ],
             "support": {
                 "issues": "https://github.com/dg/bypass-finals/issues",
-                "source": "https://github.com/dg/bypass-finals/tree/v1.10.1"
+                "source": "https://github.com/dg/bypass-finals/tree/v1.10.2"
             },
-            "time": "2026-06-04T15:48:46+00:00"
+            "time": "2026-06-15T05:01:48+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -2888,11 +2913,11 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.2.2",
+            "version": "2.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e5cc34d491a90e79c216d824f60fe21fd4d93bd6",
-                "reference": "e5cc34d491a90e79c216d824f60fe21fd4d93bd6",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f0fe3fb03bb53ce68cc2416785b260e62226ec27",
+                "reference": "f0fe3fb03bb53ce68cc2416785b260e62226ec27",
                 "shasum": ""
             },
             "require": {
@@ -2948,7 +2973,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-05T09:00:01+00:00"
+            "time": "2026-07-03T07:00:23+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -3002,21 +3027,21 @@
         },
         {
             "name": "phpstan/phpstan-doctrine",
-            "version": "2.0.25",
+            "version": "2.0.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-doctrine.git",
-                "reference": "e20e8bf3223ae6eba9c4b5987c391d922e094b3c"
+                "reference": "39b4ca45a07cdd6366eeefa2f7a993cddf3b9f9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-doctrine/zipball/e20e8bf3223ae6eba9c4b5987c391d922e094b3c",
-                "reference": "e20e8bf3223ae6eba9c4b5987c391d922e094b3c",
+                "url": "https://api.github.com/repos/phpstan/phpstan-doctrine/zipball/39b4ca45a07cdd6366eeefa2f7a993cddf3b9f9f",
+                "reference": "39b4ca45a07cdd6366eeefa2f7a993cddf3b9f9f",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4 || ^8.0",
-                "phpstan/phpstan": "^2.1.34"
+                "phpstan/phpstan": "^2.2.2"
             },
             "conflict": {
                 "doctrine/collections": "<1.0",
@@ -3073,9 +3098,9 @@
             ],
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-doctrine/issues",
-                "source": "https://github.com/phpstan/phpstan-doctrine/tree/2.0.25"
+                "source": "https://github.com/phpstan/phpstan-doctrine/tree/2.0.27"
             },
-            "time": "2026-06-02T20:27:36+00:00"
+            "time": "2026-06-10T10:39:35+00:00"
         },
         {
             "name": "phpstan/phpstan-mockery",
@@ -3128,21 +3153,21 @@
         },
         {
             "name": "phpstan/phpstan-nette",
-            "version": "2.0.10",
+            "version": "2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-nette.git",
-                "reference": "26e6253fff54b6ffbcc964016633dd09249f97a7"
+                "reference": "2c104f121b9db65407112069ef4fd43799c9ba0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-nette/zipball/26e6253fff54b6ffbcc964016633dd09249f97a7",
-                "reference": "26e6253fff54b6ffbcc964016633dd09249f97a7",
+                "url": "https://api.github.com/repos/phpstan/phpstan-nette/zipball/2c104f121b9db65407112069ef4fd43799c9ba0c",
+                "reference": "2c104f121b9db65407112069ef4fd43799c9ba0c",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4 || ^8.0",
-                "phpstan/phpstan": "^2.2.2"
+                "phpstan/phpstan": "^2.2.3"
             },
             "conflict": {
                 "nette/application": "<2.3.0",
@@ -3185,9 +3210,9 @@
             "description": "Nette Framework class reflection extension for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-nette/issues",
-                "source": "https://github.com/phpstan/phpstan-nette/tree/2.0.10"
+                "source": "https://github.com/phpstan/phpstan-nette/tree/2.0.12"
             },
-            "time": "2026-06-04T10:10:04+00:00"
+            "time": "2026-07-02T10:28:46+00:00"
         },
         {
             "name": "phpstan/phpstan-strict-rules",
@@ -3242,32 +3267,32 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "8.22.1",
+            "version": "8.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "1dd80bf3b93692bedb21a6623c496887fad05fec"
+                "reference": "70a3b2150600122f87c59cae1c1b5902ba73798b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/1dd80bf3b93692bedb21a6623c496887fad05fec",
-                "reference": "1dd80bf3b93692bedb21a6623c496887fad05fec",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/70a3b2150600122f87c59cae1c1b5902ba73798b",
+                "reference": "70a3b2150600122f87c59cae1c1b5902ba73798b",
                 "shasum": ""
             },
             "require": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.6.2 || ^0.7 || ^1.1.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || ^1.2.1",
                 "php": "^7.4 || ^8.0",
-                "phpstan/phpdoc-parser": "^2.3.0",
-                "squizlabs/php_codesniffer": "^3.13.4"
+                "phpstan/phpdoc-parser": "^2.3.2",
+                "squizlabs/php_codesniffer": "^4.0.1"
             },
             "require-dev": {
-                "phing/phing": "3.0.1|3.1.0",
+                "phing/phing": "3.0.1|3.1.2",
                 "php-parallel-lint/php-parallel-lint": "1.4.0",
-                "phpstan/phpstan": "2.1.24",
-                "phpstan/phpstan-deprecation-rules": "2.0.3",
-                "phpstan/phpstan-phpunit": "2.0.7",
-                "phpstan/phpstan-strict-rules": "2.0.6",
-                "phpunit/phpunit": "9.6.8|10.5.48|11.4.4|11.5.36|12.3.10"
+                "phpstan/phpstan": "2.2.2",
+                "phpstan/phpstan-deprecation-rules": "2.0.4",
+                "phpstan/phpstan-phpunit": "2.0.16",
+                "phpstan/phpstan-strict-rules": "2.0.11",
+                "phpunit/phpunit": "9.6.34|10.5.63|11.4.4|11.5.55|12.5.30"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -3291,7 +3316,7 @@
             ],
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/8.22.1"
+                "source": "https://github.com/slevomat/coding-standard/tree/8.30.1"
             },
             "funding": [
                 {
@@ -3303,30 +3328,30 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-09-13T08:53:30+00:00"
+            "time": "2026-06-27T11:26:35+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.13.5",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "0ca86845ce43291e8f5692c7356fccf3bcf02bf4"
+                "reference": "0525c73950de35ded110cffafb9892946d7771b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/0ca86845ce43291e8f5692c7356fccf3bcf02bf4",
-                "reference": "0ca86845ce43291e8f5692c7356fccf3bcf02bf4",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/0525c73950de35ded110cffafb9892946d7771b5",
+                "reference": "0525c73950de35ded110cffafb9892946d7771b5",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
                 "ext-tokenizer": "*",
                 "ext-xmlwriter": "*",
-                "php": ">=5.4.0"
+                "php": ">=7.2.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0 || ^9.3.4"
+                "phpunit/phpunit": "^8.4.0 || ^9.3.4 || ^10.5.32 || 11.3.3 - 11.5.28 || ^11.5.31"
             },
             "bin": [
                 "bin/phpcbf",
@@ -3351,7 +3376,7 @@
                     "homepage": "https://github.com/PHPCSStandards/PHP_CodeSniffer/graphs/contributors"
                 }
             ],
-            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "description": "PHP_CodeSniffer tokenizes PHP files and detects violations of a defined set of coding standards.",
             "homepage": "https://github.com/PHPCSStandards/PHP_CodeSniffer",
             "keywords": [
                 "phpcs",
@@ -3382,42 +3407,45 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2025-11-04T16:30:35+00:00"
+            "time": "2025-11-10T16:43:36+00:00"
         },
         {
             "name": "webnazakazku/mango-presenter-tester",
-            "version": "v0.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webnazakazku/mango-presenter-tester.git",
-                "reference": "18e916718aa4283b67b10e707e4332e7c406bb1c"
+                "reference": "4549292b9ed396119e5bda4030c177bc1d786701"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webnazakazku/mango-presenter-tester/zipball/18e916718aa4283b67b10e707e4332e7c406bb1c",
-                "reference": "18e916718aa4283b67b10e707e4332e7c406bb1c",
+                "url": "https://api.github.com/repos/webnazakazku/mango-presenter-tester/zipball/4549292b9ed396119e5bda4030c177bc1d786701",
+                "reference": "4549292b9ed396119e5bda4030c177bc1d786701",
                 "shasum": ""
             },
             "require": {
                 "nette/application": "^3.2",
+                "nette/di": "^3.2",
                 "nette/forms": "^3.2",
                 "nette/http": "^3.3.1",
                 "nette/security": "^3.2",
                 "nette/tester": "~2.0",
-                "php": ">=7.2"
+                "php": ">=8.2"
             },
             "require-dev": {
-                "contributte/qa": "^0.3",
+                "contributte/qa": "^0.4",
                 "dg/bypass-finals": "^1.8",
                 "latte/latte": "^3.0",
-                "nette/bootstrap": "~3.2.0",
+                "nette/bootstrap": "^3.2",
                 "nextras/secured-links": "@dev",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-nette": "^1.0",
-                "webnazakazku/mango-tester-http-mocks": "^0.4",
-                "webnazakazku/mango-tester-infrastructure": "^0.6"
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "webnazakazku/mango-tester-http-mocks": "^0.5",
+                "webnazakazku/mango-tester-infrastructure": "^0.7"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -3429,7 +3457,7 @@
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/webnazakazku/mango-presenter-tester/tree/v0.5"
+                "source": "https://github.com/webnazakazku/mango-presenter-tester/tree/master"
             },
             "funding": [
                 {
@@ -3437,39 +3465,42 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-11T22:15:17+00:00"
+            "time": "2026-06-24T21:23:08+00:00"
         },
         {
             "name": "webnazakazku/mango-tester-database-creator",
-            "version": "v0.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webnazakazku/mango-tester-database-creator.git",
-                "reference": "3f9cfe435f5502d6c91806a5d1d85f77a80585fd"
+                "reference": "2dab3f7f7d23a6354987c0a1b948ae16739911e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webnazakazku/mango-tester-database-creator/zipball/3f9cfe435f5502d6c91806a5d1d85f77a80585fd",
-                "reference": "3f9cfe435f5502d6c91806a5d1d85f77a80585fd",
+                "url": "https://api.github.com/repos/webnazakazku/mango-tester-database-creator/zipball/2dab3f7f7d23a6354987c0a1b948ae16739911e7",
+                "reference": "2dab3f7f7d23a6354987c0a1b948ae16739911e7",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "nette/di": "~3.0",
+                "php": ">=8.2"
             },
             "require-dev": {
-                "nette/di": "~3.0",
+                "contributte/qa": "^0.4",
                 "nextras/dbal": "^4.0",
                 "nextras/migrations": "^3.1",
                 "nextras/orm": "^4.0",
-                "ninjify/qa": "^0.13",
-                "phpstan/phpstan": "^1.0",
-                "webnazakazku/mango-tester-infrastructure": "^0.6"
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "webnazakazku/mango-tester-infrastructure": "^0.7"
             },
             "suggest": {
                 "nextras/dbal": "",
                 "nextras/migrations": "",
                 "nextras/orm": ""
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -3481,7 +3512,7 @@
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/webnazakazku/mango-tester-database-creator/tree/v0.4"
+                "source": "https://github.com/webnazakazku/mango-tester-database-creator/tree/master"
             },
             "funding": [
                 {
@@ -3489,31 +3520,35 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-25T21:20:28+00:00"
+            "time": "2026-06-25T18:51:25+00:00"
         },
         {
             "name": "webnazakazku/mango-tester-http-mocks",
-            "version": "v0.5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webnazakazku/mango-tester-http-mocks.git",
-                "reference": "aa5c7cd3e3bdf67d3d94597f3133eb3a2d25e065"
+                "reference": "326dd4d9029d274d4ea34f9e8bcc3677809db591"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webnazakazku/mango-tester-http-mocks/zipball/aa5c7cd3e3bdf67d3d94597f3133eb3a2d25e065",
-                "reference": "aa5c7cd3e3bdf67d3d94597f3133eb3a2d25e065",
+                "url": "https://api.github.com/repos/webnazakazku/mango-tester-http-mocks/zipball/326dd4d9029d274d4ea34f9e8bcc3677809db591",
+                "reference": "326dd4d9029d274d4ea34f9e8bcc3677809db591",
                 "shasum": ""
             },
             "require": {
-                "nette/http": "~3.3.0",
-                "php": ">=8.1"
+                "nette/di": "^3.2",
+                "nette/http": "^3.3",
+                "php": ">=8.2"
             },
             "require-dev": {
-                "contributte/qa": "^0.3",
-                "phpstan/phpstan": "^1.0",
-                "webnazakazku/mango-tester-infrastructure": "^0.6"
+                "contributte/qa": "^0.4",
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
+                "webnazakazku/mango-tester-infrastructure": "^0.7"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -3525,7 +3560,7 @@
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/webnazakazku/mango-tester-http-mocks/tree/v0.5"
+                "source": "https://github.com/webnazakazku/mango-tester-http-mocks/tree/master"
             },
             "funding": [
                 {
@@ -3533,37 +3568,40 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-11T21:32:23+00:00"
+            "time": "2026-06-23T21:37:38+00:00"
         },
         {
             "name": "webnazakazku/mango-tester-infrastructure",
-            "version": "v0.7",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webnazakazku/mango-tester-infrastructure.git",
-                "reference": "d89580538e58abab58547a4382e0c60007c9802d"
+                "reference": "6af994ceb7d8a6c38a62297ea75fa7c17f6c9ce0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webnazakazku/mango-tester-infrastructure/zipball/d89580538e58abab58547a4382e0c60007c9802d",
-                "reference": "d89580538e58abab58547a4382e0c60007c9802d",
+                "url": "https://api.github.com/repos/webnazakazku/mango-tester-infrastructure/zipball/6af994ceb7d8a6c38a62297ea75fa7c17f6c9ce0",
+                "reference": "6af994ceb7d8a6c38a62297ea75fa7c17f6c9ce0",
                 "shasum": ""
             },
             "require": {
                 "nette/bootstrap": "^3.2",
-                "nette/di": "~3.2",
+                "nette/di": "~3.2.0",
                 "nette/tester": "^2.3.1",
                 "nette/utils": "^4.0",
-                "php": ">=8.1"
+                "php": ">=8.2"
             },
             "require-dev": {
-                "contributte/qa": "^0.3",
+                "contributte/qa": "^0.4",
                 "mockery/mockery": "^1.0",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-nette": "^1.0",
+                "nette/http": "~3.2",
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-deprecation-rules": "^2.0",
+                "phpstan/phpstan-nette": "^2.0",
+                "phpstan/phpstan-strict-rules": "^2.0",
                 "tracy/tracy": "~2.10"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "classmap": [
@@ -3575,7 +3613,7 @@
                 "MIT"
             ],
             "support": {
-                "source": "https://github.com/webnazakazku/mango-tester-infrastructure/tree/v0.7"
+                "source": "https://github.com/webnazakazku/mango-tester-infrastructure/tree/master"
             },
             "funding": [
                 {
@@ -3583,12 +3621,18 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-12T17:44:03+00:00"
+            "time": "2026-06-25T17:26:46+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "contributte/qa": 20,
+        "webnazakazku/mango-presenter-tester": 20,
+        "webnazakazku/mango-tester-database-creator": 20,
+        "webnazakazku/mango-tester-http-mocks": 20,
+        "webnazakazku/mango-tester-infrastructure": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
@@ -3596,7 +3640,7 @@
     },
     "platform-dev": {},
     "platform-overrides": {
-        "php": "8.1.2"
+        "php": "8.3.2"
     },
     "plugin-api-version": "2.9.0"
 }

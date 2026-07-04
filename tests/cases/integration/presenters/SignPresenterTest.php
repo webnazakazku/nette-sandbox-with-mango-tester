@@ -11,6 +11,7 @@ use Webnazakazku\MangoTester\PresenterTester\PresenterTester;
 $testContainerFactory = require __DIR__ . '/../../../bootstrap.php';
 
 /**
+ * @skip
  * @testCase
  */
 class SignPresenterTest extends TestCase

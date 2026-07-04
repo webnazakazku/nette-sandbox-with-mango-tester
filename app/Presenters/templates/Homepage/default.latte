@@ -29,24 +29,6 @@
 	</div>
 
 	<h2>We hope you enjoy this framework!</h2>
-
-	<section id="template">
-		<h2>This page template located at <span>{strstr($this->getName(), app)}</span></h2>
-
-		<pre><code class="jush">{file_get_contents($this->getName())|replaceRe:'#[\w+/]{60,}#','…'}</code></pre>
-	</section>
-
-	<section id="layout">
-		<h2>Layout template located at <span>{strstr($this->getParentName(), app)}</span></h2>
-
-		<pre><code class="jush">{file_get_contents($this->getParentName())}</code></pre>
-	</section>
-
-	<section id="presenter">
-		<h2>Current presenter located at <span>{strstr($presenter->getReflection()->getFileName(), app)}</span></h2>
-
-		<pre><code class="jush-php">{file_get_contents($presenter->getReflection()->getFileName())}</code></pre>
-	</section>
 </div>
 {/block}
 
